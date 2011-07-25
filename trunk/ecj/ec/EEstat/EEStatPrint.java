@@ -38,18 +38,20 @@ public void setup(final EvolutionState state, final Parameter base)
 
     }
 
-public void postEvaluationStatistics(final EvolutionState state)
+
+public void preEvaluationStatistics(final EvolutionState state)
     {
 	
 	    // be certain to call the hook on super!
 	    super.postEvaluationStatistics(state);
 	
+	    state.output.print("Generation: " + state.generation + "\n", statLog);
   
 	    for (int i = 0; i < state.population.subpops[0].individuals.length; i++) 
 	    {
 			if (state.population.subpops[0].individuals[i] instanceof EEStatIndividualI)
 			{
-				((EEStatIndividualI)state.population.subpops[0].individuals[i]).printIndividualStats(state, statLog);
+				((EEStatIndividualI)state.population.subpops[0].individuals[i]).printIndividualStats(state, i, statLog);
 			}
 		}
     }
