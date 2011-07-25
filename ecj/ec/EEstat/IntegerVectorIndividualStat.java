@@ -16,7 +16,7 @@ import ec.vector.VectorIndividual;
  * @author Jernej
  * 
  */
-public class IntegerVectorIndividualStat extends IntegerVectorIndividual 
+public class IntegerVectorIndividualStat extends IntegerVectorIndividual implements EEStatIndividualI
 {
 
 	public int indTrace[][];
@@ -154,5 +154,12 @@ public void reset(EvolutionState state, int thread)
 	    indTrace[2][0] = state.generation;
 		indTrace[2][1] = indID;
     }
+
+
+public void printIndividualStats(EvolutionState state, int log)
+	{
+		state.output.println("Generation: " + state.generation, log);
+		
+	}
 
 }
