@@ -6,52 +6,53 @@ package ec.EEstat;
 
 import java.util.Arrays;
 
+import sun.reflect.generics.tree.IntSignature;
+
 import ec.EvolutionState;
 import ec.util.Parameter;
 import ec.vector.IntegerVectorIndividual;
 import ec.vector.IntegerVectorSpecies;
+import ec.vector.VectorDefaults;
 import ec.vector.VectorIndividual;
 
 /**
  * @author Jernej
  * 
  */
+
+
 public class IntegerVectorIndividualStat extends IntegerVectorIndividual implements EEStatIndividualI
 {
 
+	static int indID;
 	public int indTrace[][];
 	public int indStatistics[];
-	private static int indID;
 	
+	public static final String P_INTEGERVECTORINDIVIDUAL = "int-vect-ind-stat";
+    
+    public Parameter defaultBase()
+    {
+        return VectorDefaults.base().push(P_INTEGERVECTORINDIVIDUAL);
+    }
 	
 	public Object clone() 
 	{
-		IntegerVectorIndividualStat myobj = (IntegerVectorIndividualStat) (super
-				.clone());
+		IntegerVectorIndividualStat myobj = (IntegerVectorIndividualStat) (super.clone());
 
 		// must clone the genome
-		myobj.indTrace = (int[][]) indTrace.clone();
-		myobj.indStatistics = (int[]) indStatistics.clone();
-
+		myobj.indTrace =  (int[][])(indTrace.clone());
+		myobj.indStatistics = (int[])(indStatistics.clone());
+		
+		
 		return myobj;
 	}
 
 	public void setup(final EvolutionState state, final Parameter base) 
 	{
-		indID++;
 		super.setup(state, base);
 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
-
-		indTrace[0][0] = -1; 
-		indTrace[0][1] = -1;
-
-		indTrace[1][0] = -1;
-		indTrace[1][1] = -1;
-
-		indTrace[2][0] = state.generation;
-		indTrace[2][1] = indID;
 
 	}
 	
@@ -70,8 +71,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	
 	public int similarTo(VectorIndividual ind1, VectorIndividual ind2)
 	{
-		int dimmDiffFirst = this.dimmensionChanged(ind1);
-		int dimmDiffSec = this.dimmensionChanged(ind2);
+		int dimmDiffFirst = dimmensionChanged(ind1);
+		int dimmDiffSec = dimmensionChanged(ind2);
 		
 		
 		if(dimmDiffFirst == dimmDiffSec)
@@ -97,11 +98,12 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		IntegerVectorIndividualStat ind2 = (IntegerVectorIndividualStat) ind.clone();
 		int similar = 0;
 		
+		
 		super.defaultCrossover(state, thread, ind);
 		
 		similar = this.similarTo(ind1, ind2);
 		
-		this.indStatistics[1] = 1;
+		
 		if(similar == 1)
 		{
 			this.indTrace[0][0] = ind1.indTrace[2][0];
@@ -124,41 +126,99 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			this.indStatistics[0] = this.dimmensionChanged(ind2);
 		}
 		
-		/*TODO: preveri kateri je blizji novima nastalima posameznikoma. in to shrani v indTrace.
-		 * ter primerno posodobi indStatistics. 
-		 */
-
 		
+		similar = ((IntegerVectorIndividualStat)ind).similarTo(ind1, ind2);
+		
+		
+		if(similar == 1)
+		{
+			((IntegerVectorIndividualStat)ind).indTrace[0] = ind1.indTrace[2].clone();
+			
+			((IntegerVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
+			
+			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind1);
+			
+		}
+		else
+		{
+			((IntegerVectorIndividualStat)ind).indTrace[0] = ind2.indTrace[2].clone();
+			
+			((IntegerVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
+			
+			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind2);
+		}
+
 	}
 	
 	public void defaultMutate(EvolutionState state, int thread)
     {
+
+		int dimmChange = 0;
+		
+		for (int i = 0; i < state.population.subpops[0].individuals.length; i++) 
+		{
+			if (Arrays.equals(((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).genome, genome))
+			{
+				indTrace[2][0] = i;
+				indTrace[2][1] = state.generation;
+			}
+		}
+		
 		IntegerVectorIndividualStat tmpInd = (IntegerVectorIndividualStat)this.clone();
 		
 		super.defaultMutate(state, thread);
 		
-		this.indStatistics[2] = this.dimmensionChanged(tmpInd);
+		dimmChange = this.dimmensionChanged(tmpInd);
+		
+		if(dimmChange > 0)
+		{
+			
+			//indTrace[0] = indTrace[2].clone();
+			indStatistics[1] = dimmChange;
+			
+		}
+		
     }
     
 
-public void reset(EvolutionState state, int thread)
+	public void reset(EvolutionState state, int thread)
     {
 	    IntegerVectorSpecies s = (IntegerVectorSpecies) species;
 	    for(int x=0;x<genome.length;x++)
 	        genome[x] = randomValueFromClosedInterval((int)s.minGene(x), (int)s.maxGene(x), state.random[thread]);
 	    
-	    Arrays.fill(this.indStatistics, 0);
-	    Arrays.fill(this.indTrace[0], -1);
-	    Arrays.fill(this.indTrace[1], -1);
+	    indTrace = new int[3][2];
+		indStatistics = new int[4];
+		
+	    Arrays.fill(indStatistics, 0);
+	    Arrays.fill(indTrace[0], -1);
+	    Arrays.fill(indTrace[1], -1);
 	    
-	    indTrace[2][0] = state.generation;
-		indTrace[2][1] = indID;
     }
 
 
-public void printIndividualStats(EvolutionState state, int log)
+
+	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
-		state.output.println("Generation: " + state.generation, log);
+	
+		for (int i = 0; i < state.population.subpops[0].individuals.length; i++) {
+			if (Arrays
+					.equals(((IntegerVectorIndividualStat) state.population.subpops[0].individuals[i]).genome,
+							this.genome)) {
+				indTrace[2][0] = i;
+				indTrace[2][1] = state.generation;
+			}
+		}
+		
+		state.output.print("p1(" + indTrace[0][0] + "," + indTrace[0][1] + ") ", log);
+		state.output.print("p2(" + indTrace[1][0] + "," + indTrace[1][1] + ") ", log);
+		state.output.print("id(" + indSeq + "," + indTrace[2][1] + ") ", log);
+		state.output.print("in(" + genotypeToStringForHumans() + ") ", log);
+		state.output.print("c" + indStatistics[0] + " ", log);
+		state.output.print("m" + indStatistics[1] + " ", log);
+		state.output.print("r" + indStatistics[2] + "\n", log);
+		
+		Arrays.fill(indStatistics, 0);
 		
 	}
 
