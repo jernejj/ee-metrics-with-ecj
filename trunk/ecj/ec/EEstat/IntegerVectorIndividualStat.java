@@ -6,8 +6,6 @@ package ec.EEstat;
 
 import java.util.Arrays;
 
-import sun.reflect.generics.tree.IntSignature;
-
 import ec.EvolutionState;
 import ec.util.Parameter;
 import ec.vector.IntegerVectorIndividual;
@@ -102,8 +100,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		super.defaultCrossover(state, thread, ind);
 		
 		similar = this.similarTo(ind1, ind2);
-		
-		
+				
 		if(similar == 1)
 		{
 			this.indTrace[0][0] = ind1.indTrace[2][0];
@@ -128,7 +125,6 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		
 		
 		similar = ((IntegerVectorIndividualStat)ind).similarTo(ind1, ind2);
-		
 		
 		if(similar == 1)
 		{
@@ -159,10 +155,12 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		{
 			if (Arrays.equals(((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).genome, genome))
 			{
-				indTrace[2][0] = i;
-				indTrace[2][1] = state.generation;
+				indTrace[2] = ((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).indTrace[2].clone();
+				break;
 			}
+			
 		}
+		
 		
 		IntegerVectorIndividualStat tmpInd = (IntegerVectorIndividualStat)this.clone();
 		
@@ -172,8 +170,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		
 		if(dimmChange > 0)
 		{
-			
-			//indTrace[0] = indTrace[2].clone();
+
+			//indTrace[0] = tmpInd.indTrace[2].clone();
 			indStatistics[1] = dimmChange;
 			
 		}
@@ -200,15 +198,10 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
-	
-		for (int i = 0; i < state.population.subpops[0].individuals.length; i++) {
-			if (Arrays
-					.equals(((IntegerVectorIndividualStat) state.population.subpops[0].individuals[i]).genome,
-							this.genome)) {
-				indTrace[2][0] = i;
-				indTrace[2][1] = state.generation;
-			}
-		}
+	    
+	    indTrace[2][0] = indSeq;
+	    indTrace[2][1] = state.generation;
+
 		
 		state.output.print("p1(" + indTrace[0][0] + "," + indTrace[0][1] + ") ", log);
 		state.output.print("p2(" + indTrace[1][0] + "," + indTrace[1][1] + ") ", log);
@@ -217,6 +210,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		state.output.print("c" + indStatistics[0] + " ", log);
 		state.output.print("m" + indStatistics[1] + " ", log);
 		state.output.print("r" + indStatistics[2] + "\n", log);
+		
+
 		
 		Arrays.fill(indStatistics, 0);
 		
