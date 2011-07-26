@@ -26,6 +26,9 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	public int indTrace[][];
 	public int indStatistics[];
 	
+	public Arrays iTrace;
+	
+	
 	public static final String P_INTEGERVECTORINDIVIDUAL = "int-vect-ind-stat";
     
     public Parameter defaultBase()
@@ -38,9 +41,23 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		IntegerVectorIndividualStat myobj = (IntegerVectorIndividualStat) (super.clone());
 
 		// must clone the genome
-		myobj.indTrace =  (int[][])(indTrace.clone());
-		myobj.indStatistics = (int[])(indStatistics.clone());
 		
+		myobj.indTrace = new int[3][2];
+		myobj.indStatistics = new int[4];
+		
+	//	myobj.indTrace =  (int[][])(indTrace.clone());
+	//	myobj.indStatistics = (int[])(indStatistics.clone());
+		
+       	for (int i = 0; i < indTrace.length; i++) 
+			for (int j = 0; j < indTrace[i].length; j++) 
+			{
+				myobj.indTrace[i][j] = indTrace[i][j];
+			}
+		
+		for (int i = 0; i < indStatistics.length; i++) 
+		{
+			myobj.indStatistics[i] = indStatistics[i];
+		}
 		
 		return myobj;
 	}
@@ -51,6 +68,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
+
 
 	}
 	
@@ -151,15 +169,6 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 		int dimmChange = 0;
 		
-		for (int i = 0; i < state.population.subpops[0].individuals.length; i++) 
-		{
-			if (Arrays.equals(((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).genome, genome))
-			{
-				indTrace[2] = ((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).indTrace[2].clone();
-				break;
-			}
-			
-		}
 		
 		
 		IntegerVectorIndividualStat tmpInd = (IntegerVectorIndividualStat)this.clone();
@@ -170,6 +179,16 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		
 		if(dimmChange > 0)
 		{
+			/*for (int i = 0; i < state.population.subpops[0].individuals.length; i++) 
+			{
+				if (Arrays.equals(((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).genome, tmpInd.genome))
+				{
+					indTrace[2][0] = i;
+					indTrace[2][1] = state.generation;
+					break;
+				}
+				
+			}*/
 
 			//indTrace[0] = tmpInd.indTrace[2].clone();
 			indStatistics[1] = dimmChange;
@@ -185,8 +204,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	    for(int x=0;x<genome.length;x++)
 	        genome[x] = randomValueFromClosedInterval((int)s.minGene(x), (int)s.maxGene(x), state.random[thread]);
 	    
-	    indTrace = new int[3][2];
-		indStatistics = new int[4];
+	  //  indTrace = new int[3][2];
+	//	indStatistics = new int[4];
 		
 	    Arrays.fill(indStatistics, 0);
 	    Arrays.fill(indTrace[0], -1);
