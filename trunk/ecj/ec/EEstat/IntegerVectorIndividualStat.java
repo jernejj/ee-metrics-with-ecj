@@ -183,9 +183,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 	public void reset(EvolutionState state, int thread)
     {
-	    IntegerVectorSpecies s = (IntegerVectorSpecies) species;
-	    for(int x=0;x<genome.length;x++)
-	        genome[x] = randomValueFromClosedInterval((int)s.minGene(x), (int)s.maxGene(x), state.random[thread]);
+		super.reset(state, thread);
 
 		/* reset the statistics and parents of individual */
 	    Arrays.fill(indStatistics, 0);
@@ -196,7 +194,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 
 
-	/* this function must be called in preEvaluationStatistics statistic function, meanning that this
+	/* this function must be called in preEvaluationStatistics statistic function, meaning that this
 	 * must be call post evaluating sequence of EA.
 	 * @see ec.EEstat.EEStatIndividualI#printIndividualStats(ec.EvolutionState, int, int)
 	 */
