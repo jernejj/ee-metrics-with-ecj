@@ -174,7 +174,6 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 
 	public void reset(EvolutionState state, int thread)
     {
-	    IntegerVectorSpecies s = (IntegerVectorSpecies) species;
 	    for(int x=0;x<genome.length;x++)
             genome[x] = state.random[thread].nextBoolean();
 
