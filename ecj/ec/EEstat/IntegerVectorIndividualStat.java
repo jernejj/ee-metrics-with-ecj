@@ -42,11 +42,11 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 		// must clone the genome
 		
+		
+		/* for information: use of indTrace.clone() is not sufficient here, hard copy must be done */
+		
 		myobj.indTrace = new int[3][2];
 		myobj.indStatistics = new int[4];
-		
-	//	myobj.indTrace =  (int[][])(indTrace.clone());
-	//	myobj.indStatistics = (int[])(indStatistics.clone());
 		
        	for (int i = 0; i < indTrace.length; i++) 
 			for (int j = 0; j < indTrace[i].length; j++) 
@@ -117,6 +117,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		
 		super.defaultCrossover(state, thread, ind);
 		
+		/* after the crossover, compute and sets the right parent for the new childs */
+		
 		similar = this.similarTo(ind1, ind2);
 				
 		if(similar == 1)
@@ -169,30 +171,16 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 		int dimmChange = 0;
 		
-		
-		
 		IntegerVectorIndividualStat tmpInd = (IntegerVectorIndividualStat)this.clone();
 		
 		super.defaultMutate(state, thread);
 		
 		dimmChange = this.dimmensionChanged(tmpInd);
 		
+		/* store how may dimensions were changed by evolution */
 		if(dimmChange > 0)
 		{
-			/*for (int i = 0; i < state.population.subpops[0].individuals.length; i++) 
-			{
-				if (Arrays.equals(((IntegerVectorIndividualStat)state.population.subpops[0].individuals[i]).genome, tmpInd.genome))
-				{
-					indTrace[2][0] = i;
-					indTrace[2][1] = state.generation;
-					break;
-				}
-				
-			}*/
-
-			//indTrace[0] = tmpInd.indTrace[2].clone();
 			indStatistics[1] = dimmChange;
-			
 		}
 		
     }
@@ -203,10 +191,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	    IntegerVectorSpecies s = (IntegerVectorSpecies) species;
 	    for(int x=0;x<genome.length;x++)
 	        genome[x] = randomValueFromClosedInterval((int)s.minGene(x), (int)s.maxGene(x), state.random[thread]);
-	    
-	  //  indTrace = new int[3][2];
-	//	indStatistics = new int[4];
-		
+
+		/* reset the statistics and parents of individual */
 	    Arrays.fill(indStatistics, 0);
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
@@ -215,13 +201,17 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 
 
+	/* this function must be called in preEvaluationStatistics statistic function, meanning that this
+	 * must be call post evaluating sequence of EA.
+	 * @see ec.EEstat.EEStatIndividualI#printIndividualStats(ec.EvolutionState, int, int)
+	 */
 	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
 	    
+		/* set the proper ID for the indvidual */
 	    indTrace[2][0] = indSeq;
 	    indTrace[2][1] = state.generation;
 
-		
 		state.output.print("p1(" + indTrace[0][0] + "," + indTrace[0][1] + ") ", log);
 		state.output.print("p2(" + indTrace[1][0] + "," + indTrace[1][1] + ") ", log);
 		state.output.print("id(" + indSeq + "," + indTrace[2][1] + ") ", log);
@@ -230,8 +220,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		state.output.print("m" + indStatistics[1] + " ", log);
 		state.output.print("r" + indStatistics[2] + "\n", log);
 		
-
-		
+		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
 		
 	}
