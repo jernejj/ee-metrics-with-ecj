@@ -4,29 +4,28 @@ import java.util.Arrays;
 
 import ec.EvolutionState;
 import ec.util.Parameter;
-import ec.vector.BitVectorIndividual;
-import ec.vector.IntegerVectorSpecies;
+import ec.vector.FloatVectorIndividual;
 import ec.vector.VectorDefaults;
 import ec.vector.VectorIndividual;
 
-public class BitVectorIndividualStat extends BitVectorIndividual implements EEStatIndividualI
+public class FloatVectorIndividualStat extends FloatVectorIndividual implements EEStatIndividualI
 {
-
 	public int indTrace[][];
 	public int indStatistics[];
 	
-	public static final String P_BITVECTORINDIVIDUAL = "bit-vect-ind-stat";
+	public static final String P_FLOATVECTORINDIVIDUALSTAT = "float-vect-ind-stat";
     
     public Parameter defaultBase()
     {
-        return VectorDefaults.base().push(P_BITVECTORINDIVIDUAL);
+        return VectorDefaults.base().push(P_FLOATVECTORINDIVIDUALSTAT);
     }
 	
 	public Object clone() 
 	{
-		BitVectorIndividualStat myobj = (BitVectorIndividualStat) (super.clone());
+		FloatVectorIndividualStat myobj = (FloatVectorIndividualStat) (super.clone());
 
 		// must clone the genome
+		
 		
 		/* for information: use of indTrace.clone() is not sufficient here, hard copy must be done */
 		
@@ -63,7 +62,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 		
 		for (int i = 0; i < this.genome.length; i++)
 		{
-			if(this.genome[i] != ((BitVectorIndividualStat)ind).genome[i])
+			if(this.genome[i] != ((FloatVectorIndividualStat)ind).genome[i])
 				dimmChanged++;
 		}
 		
@@ -95,8 +94,8 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 	
 	public void defaultCrossover(EvolutionState state, int thread, VectorIndividual ind)
 	{
-		BitVectorIndividualStat ind1 = (BitVectorIndividualStat) this.clone();
-		BitVectorIndividualStat ind2 = (BitVectorIndividualStat) ind.clone();
+		FloatVectorIndividualStat ind1 = (FloatVectorIndividualStat) this.clone();
+		FloatVectorIndividualStat ind2 = (FloatVectorIndividualStat) ind.clone();
 		int similar = 0;
 		
 		
@@ -129,24 +128,24 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 		}
 		
 		
-		similar = ((BitVectorIndividualStat)ind).similarTo(ind1, ind2);
+		similar = ((FloatVectorIndividualStat)ind).similarTo(ind1, ind2);
 		
 		if(similar == 1)
 		{
-			((BitVectorIndividualStat)ind).indTrace[0] = ind1.indTrace[2].clone();
+			((FloatVectorIndividualStat)ind).indTrace[0] = ind1.indTrace[2].clone();
 			
-			((BitVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
+			((FloatVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
 			
-			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind1);
+			((FloatVectorIndividualStat)ind).indStatistics[0] = ((FloatVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
 		}
 		else
 		{
-			((BitVectorIndividualStat)ind).indTrace[0] = ind2.indTrace[2].clone();
+			((FloatVectorIndividualStat)ind).indTrace[0] = ind2.indTrace[2].clone();
 			
-			((BitVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
+			((FloatVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
 			
-			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind2);
+			((FloatVectorIndividualStat)ind).indStatistics[0] = ((FloatVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
 
 	}
@@ -156,7 +155,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 
 		int dimmChange = 0;
 		
-		BitVectorIndividualStat tmpInd = (BitVectorIndividualStat)this.clone();
+		FloatVectorIndividualStat tmpInd = (FloatVectorIndividualStat)this.clone();
 		
 		super.defaultMutate(state, thread);
 		
