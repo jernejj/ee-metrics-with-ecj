@@ -1,4 +1,4 @@
-package ec.EEstat.samples;
+package ec.EEstat.samples.integer;
 
 import ec.EvolutionState;
 import ec.Individual;
