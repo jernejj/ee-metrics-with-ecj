@@ -1,39 +1,30 @@
-/**
- * 
- */
 package ec.EEstat;
-
 
 import java.util.Arrays;
 
 import ec.EvolutionState;
 import ec.util.Parameter;
-import ec.vector.IntegerVectorIndividual;
+import ec.vector.BitVectorIndividual;
 import ec.vector.IntegerVectorSpecies;
 import ec.vector.VectorDefaults;
 import ec.vector.VectorIndividual;
 
-/**
- * @author Jernej
- * 
- */
-
-
-public class IntegerVectorIndividualStat extends IntegerVectorIndividual implements EEStatIndividualI
+public class BitVectorIndividualStat extends BitVectorIndividual implements EEStatIndividualI
 {
+
 	public int indTrace[][];
 	public int indStatistics[];
 	
-	public static final String P_INTEGERVECTORINDIVIDUAL = "int-vect-ind-stat";
+	public static final String P_BITVECTORINDIVIDUAL = "bit-vect-ind-stat";
     
     public Parameter defaultBase()
     {
-        return VectorDefaults.base().push(P_INTEGERVECTORINDIVIDUAL);
+        return VectorDefaults.base().push(P_BITVECTORINDIVIDUAL);
     }
 	
 	public Object clone() 
 	{
-		IntegerVectorIndividualStat myobj = (IntegerVectorIndividualStat) (super.clone());
+		BitVectorIndividualStat myobj = (BitVectorIndividualStat) (super.clone());
 
 		// must clone the genome
 		
@@ -73,7 +64,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		
 		for (int i = 0; i < this.genome.length; i++)
 		{
-			if(this.genome[i] != ((IntegerVectorIndividualStat)ind).genome[i])
+			if(this.genome[i] != ((BitVectorIndividualStat)ind).genome[i])
 				dimmChanged++;
 		}
 		
@@ -105,8 +96,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	
 	public void defaultCrossover(EvolutionState state, int thread, VectorIndividual ind)
 	{
-		IntegerVectorIndividualStat ind1 = (IntegerVectorIndividualStat) this.clone();
-		IntegerVectorIndividualStat ind2 = (IntegerVectorIndividualStat) ind.clone();
+		BitVectorIndividualStat ind1 = (BitVectorIndividualStat) this.clone();
+		BitVectorIndividualStat ind2 = (BitVectorIndividualStat) ind.clone();
 		int similar = 0;
 		
 		
@@ -139,24 +130,24 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		}
 		
 		
-		similar = ((IntegerVectorIndividualStat)ind).similarTo(ind1, ind2);
+		similar = ((BitVectorIndividualStat)ind).similarTo(ind1, ind2);
 		
 		if(similar == 1)
 		{
-			((IntegerVectorIndividualStat)ind).indTrace[0] = ind1.indTrace[2].clone();
+			((BitVectorIndividualStat)ind).indTrace[0] = ind1.indTrace[2].clone();
 			
-			((IntegerVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
+			((BitVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
 			
-			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind1);
+			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
 		}
 		else
 		{
-			((IntegerVectorIndividualStat)ind).indTrace[0] = ind2.indTrace[2].clone();
+			((BitVectorIndividualStat)ind).indTrace[0] = ind2.indTrace[2].clone();
 			
-			((IntegerVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
+			((BitVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
 			
-			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind2);
+			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
 
 	}
@@ -166,7 +157,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 		int dimmChange = 0;
 		
-		IntegerVectorIndividualStat tmpInd = (IntegerVectorIndividualStat)this.clone();
+		BitVectorIndividualStat tmpInd = (BitVectorIndividualStat)this.clone();
 		
 		super.defaultMutate(state, thread);
 		
@@ -185,7 +176,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
     {
 	    IntegerVectorSpecies s = (IntegerVectorSpecies) species;
 	    for(int x=0;x<genome.length;x++)
-	        genome[x] = randomValueFromClosedInterval((int)s.minGene(x), (int)s.maxGene(x), state.random[thread]);
+            genome[x] = state.random[thread].nextBoolean();
 
 		/* reset the statistics and parents of individual */
 	    Arrays.fill(indStatistics, 0);
@@ -219,5 +210,4 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		Arrays.fill(indStatistics, 0);
 		
 	}
-
 }
