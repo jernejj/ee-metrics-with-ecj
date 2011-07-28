@@ -1,0 +1,30 @@
+
+parent.0 =	../../../simple/simple.params
+
+pop.subpop.0.size =  100 
+generations =        500
+
+stat.file		= out.stat
+
+pop.subpop.0.species.pipe = ec.vector.breed.VectorCrossoverPipeline
+pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.source.0 = ec.select.TournamentSelection
+pop.subpop.0.species.pipe.source.1 = ec.select.TournamentSelection
+select.tournament.size		= 2
+
+pop.subpop.0.species =              ec.vector.VectorSpecies
+pop.subpop.0.species.ind =          ec.EEstat.BitVectorIndividualStat
+pop.subpop.0.species.fitness = 		ec.simple.SimpleFitness
+
+
+pop.subpop.0.species.genome-size	= 10
+pop.subpop.0.species.crossover-type	= one
+pop.subpop.0.species.mutation-prob	= 0.4
+
+
+eval.problem = ec.EEstat.samples.simpleKnapsack.SimpleKnapsack
+
+
+stat.num-children       = 1
+stat.child.0            = ec.EEstat.EEStatPrint
+stat.child.0.stat-file  = EEstat.stat
