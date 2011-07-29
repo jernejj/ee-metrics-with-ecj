@@ -1,5 +1,6 @@
 package ec.EEstat;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 import ec.EvolutionState;
@@ -180,8 +181,17 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	    Arrays.fill(indTrace[1], -1);
 	    
     }
-
-
+	
+	public String genotypeToStringForHumans()
+    {
+		DecimalFormat decForm = new DecimalFormat();
+		decForm.setMaximumFractionDigits(6);
+		
+	    String s = "";
+	    for (int i = 0; i < genome.length; i++)
+	        s = s + " " + decForm.format(genome[i]);
+	    return s;
+    }
 
 	/* this function must be called in preEvaluationStatistics statistic function, meaning that this
 	 * must be call post evaluating sequence of EA.
