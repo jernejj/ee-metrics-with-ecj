@@ -2,8 +2,8 @@
 parent.0 =	../../../es/es.params
 
 breed =              ec.es.MuCommaLambdaBreeder
-es.mu.0 =            1 
-es.lambda.0 =        5 
+es.mu.0 =            5 
+es.lambda.0 =        10 
 pop.subpop.0.size =  10 
 generations =        200
 
@@ -18,6 +18,7 @@ select.tournament.size		= 2
 pop.subpop.0.species =                  ec.vector.FloatVectorSpecies
 pop.subpop.0.species.ind =              ec.EEstat.FloatVectorIndividualStat
 pop.subpop.0.species.fitness = 		ec.simple.SimpleFitness
+pop.subpop.0.species.ind.fraction-digits = 4
 
 # Per-gene mutation probability of 1.0
 pop.subpop.0.species.mutation-prob = 1.0

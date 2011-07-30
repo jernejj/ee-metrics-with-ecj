@@ -125,6 +125,9 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			this.indTrace[1][1] = ind2.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind1);
+			this.indStatistics[1] = ind1.indStatistics[1];
+			this.indStatistics[2] = ind1.indStatistics[2];
+			this.indStatistics[3] = ind1.indStatistics[3];
 			
 		}
 		else
@@ -136,8 +139,10 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			this.indTrace[1][1] = ind1.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind2);
+			this.indStatistics[1] = ind2.indStatistics[1];
+			this.indStatistics[2] = ind2.indStatistics[2];
+			this.indStatistics[3] = ind2.indStatistics[3];
 		}
-		
 		
 		similar = ((IntegerVectorIndividualStat)ind).similarTo(ind1, ind2);
 		
@@ -147,6 +152,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			
 			((IntegerVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
 			
+			((IntegerVectorIndividualStat)ind).indStatistics = ind1.indStatistics.clone();
 			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
 		}
@@ -156,6 +162,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			
 			((IntegerVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
 			
+			((IntegerVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
 

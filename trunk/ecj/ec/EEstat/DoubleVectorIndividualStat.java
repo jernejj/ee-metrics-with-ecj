@@ -1,5 +1,6 @@
 package ec.EEstat;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 import ec.EvolutionState;
@@ -12,8 +13,10 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 {
 	public int indTrace[][];
 	public int indStatistics[];
+	private int fractNums;
 	
 	public static final String P_DOUBLEVECTORINDIVIDUALSTAT = "double-vect-ind-stat";
+	public static final String P_DOUBLEVECTORPRECISONOUTPUT = "fraction-digits";
     
     public Parameter defaultBase()
     {
@@ -50,6 +53,11 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	{
 		super.setup(state, base);
 
+		Parameter def = defaultBase();
+		
+		fractNums = state.parameters.getIntWithDefault(base.push(P_DOUBLEVECTORPRECISONOUTPUT),
+													   def.push(P_DOUBLEVECTORPRECISONOUTPUT), 3);
+		
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
 
@@ -92,6 +100,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		
 	}
 	
+	
 	public void defaultCrossover(EvolutionState state, int thread, VectorIndividual ind)
 	{
 		DoubleVectorIndividualStat ind1 = (DoubleVectorIndividualStat) this.clone();
@@ -114,6 +123,9 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			this.indTrace[1][1] = ind2.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind1);
+			this.indStatistics[1] = ind1.indStatistics[1];
+			this.indStatistics[2] = ind1.indStatistics[2];
+			this.indStatistics[3] = ind1.indStatistics[3];
 			
 		}
 		else
@@ -125,6 +137,9 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			this.indTrace[1][1] = ind1.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind2);
+			this.indStatistics[1] = ind2.indStatistics[1];
+			this.indStatistics[2] = ind2.indStatistics[2];
+			this.indStatistics[3] = ind2.indStatistics[3];
 		}
 		
 		
@@ -136,6 +151,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			
 			((DoubleVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
 			
+			((DoubleVectorIndividualStat)ind).indStatistics = ind1.indStatistics.clone();
 			((DoubleVectorIndividualStat)ind).indStatistics[0] = ((DoubleVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
 		}
@@ -145,6 +161,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			
 			((DoubleVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
 			
+			((DoubleVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((DoubleVectorIndividualStat)ind).indStatistics[0] = ((DoubleVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
 
@@ -181,6 +198,16 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	    
     }
 
+	public String genotypeToStringForHumans()
+    {
+		DecimalFormat decForm = new DecimalFormat();
+		decForm.setMaximumFractionDigits(fractNums);
+		
+	    String s = "";
+	    for (int i = 0; i < genome.length; i++)
+	        s = s + " " + decForm.format(genome[i]);
+	    return s;
+    }
 
 
 	/* this function must be called in preEvaluationStatistics statistic function, meaning that this
