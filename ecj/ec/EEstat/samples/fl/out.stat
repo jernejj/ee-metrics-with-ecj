@@ -3,1404 +3,1404 @@ Generation: 0
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 8.6876742E8
- 36,48587 64,363495 84,575195 87,914177 49,755066
+Fitness: 4.7193808E8
+ 31,9001 54,0754 89,0648 42,5809 72,1394
 
 Generation: 1
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 8.8107667E8
- 36,48587 64,363495 84,575195 88,938431 49,878906
+Fitness: 1.09048294E9
+ 82,7649 34,4142 94,9373 80,8985 49,8491
 
 Generation: 2
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.0403142E8
- 36,48587 64,363495 84,223862 90,312363 50,610054
+Fitness: 2.08658099E9
+ 82,7649 34,4142 94,9373 80,8985 95,3836
 
 Generation: 3
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 8.9504602E8
- 36,48587 64,363495 84,575195 88,88652 50,699322
+Fitness: 2.09273178E9
+ 82,7649 34,8091 94,588 80,8091 95,0338
 
 Generation: 4
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 8.9394048E8
- 36,48587 64,363495 84,165703 89,065109 50,781029
+Fitness: 2.09273178E9
+ 82,7649 34,8091 94,588 80,8091 95,0338
 
 Generation: 5
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.0037107E8
- 36,48587 64,363495 84,44593 88,589386 51,250343
+Fitness: 2.15901773E9
+ 83,1734 35,3558 95,5431 80,9606 94,9156
 
 Generation: 6
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.2533037E8
- 36,736202 64,621307 84,160645 89,580605 51,701572
+Fitness: 2.13500762E9
+ 83,1734 35,3558 95,167 80,8406 94,3709
 
 Generation: 7
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.2674918E8
- 36,48587 64,363495 84,44593 89,577087 52,170162
+Fitness: 2.14298816E9
+ 82,7649 34,8091 95,3907 81,8305 95,2927
 
 Generation: 8
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.537657E8
- 36,530148 64,475159 85,059052 89,93792 52,933971
+Fitness: 2.1945536E9
+ 82,7649 36,2554 94,8407 81,6265 94,4716
 
 Generation: 9
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.537657E8
- 36,530148 64,475159 85,059052 89,93792 52,933971
+Fitness: 2.24785203E9
+ 82,7649 36,6904 94,9209 82,0207 95,0787
 
 Generation: 10
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.5825005E8
- 36,530148 64,475159 84,885757 90,241081 53,112396
+Fitness: 2.24785203E9
+ 82,7649 36,6904 94,9209 82,0207 95,0787
 
 Generation: 11
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.7367341E8
- 36,530148 64,475159 84,885757 90,241081 53,967258
+Fitness: 2.21752064E9
+ 82,7649 35,8377 95,2999 81,949 95,7294
 
 Generation: 12
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 9.9049805E8
- 36,639664 64,602722 85,146408 90,223663 54,470898
+Fitness: 2.24660352E9
+ 82,9301 36,6481 95,992 81,2815 94,7405
 
 Generation: 13
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.00994227E9
- 36,530148 64,885666 86,093773 90,061104 54,952484
+Fitness: 2.32340301E9
+ 82,9301 36,6481 96,2757 82,4193 96,3419
 
 Generation: 14
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.01608198E9
- 36,530148 64,813042 85,990425 90,049698 55,422047
+Fitness: 2.34925235E9
+ 82,8345 36,8371 96,6387 82,9574 96,0345
 
 Generation: 15
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.0176135E9
- 36,530148 64,885666 86,093773 88,953339 56,059429
+Fitness: 2.40476467E9
+ 82,8345 37,1929 96,3644 84,0012 96,427
 
 Generation: 16
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.03198669E9
- 36,403187 64,280502 86,109627 90,11248 56,835381
+Fitness: 2.39994522E9
+ 82,2818 37,1126 96,1384 84,5621 96,6725
 
 Generation: 17
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.06090643E9
- 36,530148 64,885666 86,093773 90,986382 57,138489
+Fitness: 2.39574144E9
+ 82,2818 37,2798 96,4851 84,499 95,7967
 
 Generation: 18
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.0610921E9
- 36,530148 64,692215 86,582832 92,000084 56,367611
+Fitness: 2.39136512E9
+ 83,223 36,6158 96,8086 82,7431 97,9691
 
 Generation: 19
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.07466458E9
- 36,056175 65,616234 86,676498 91,841782 57,061123
+Fitness: 2.39136512E9
+ 83,223 36,6158 96,8086 82,7431 97,9691
 
 Generation: 20
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.08087373E9
- 36,056175 65,616234 86,676498 91,972519 57,309231
+Fitness: 2.39770931E9
+ 83,223 36,6158 97,1862 83,3553 97,1286
 
 Generation: 21
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.08487117E9
- 36,056175 65,616234 86,676498 92,010475 57,497448
+Fitness: 2.42976102E9
+ 83,0233 37,5754 96,9671 81,6605 98,3613
 
 Generation: 22
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.10102349E9
- 36,056175 65,695343 86,910072 92,665253 57,715874
+Fitness: 2.44078336E9
+ 81,9258 37,5287 97,4865 83,2678 97,7965
 
 Generation: 23
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.11927411E9
- 36,056175 65,616234 87,409958 93,375145 57,963329
+Fitness: 2.50555341E9
+ 83,223 37,5545 98,2546 83,8691 97,2844
 
 Generation: 24
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.13002291E9
- 36,056175 65,616234 87,100082 93,776314 58,476933
+Fitness: 2.51195853E9
+ 83,223 37,8372 98,5922 83,4551 96,9517
 
 Generation: 25
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.13002957E9
- 35,81287 65,736061 87,63279 93,19384 58,775066
+Fitness: 2.51754957E9
+ 84,3623 37,4867 98,1749 82,3608 98,4536
 
 Generation: 26
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.13702682E9
- 35,81287 65,925034 87,201393 93,061584 59,34544
+Fitness: 2.550688E9
+ 83,226 38,2965 98,68 83,006 97,7014
 
 Generation: 27
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.15595981E9
- 36,056175 65,616234 87,100082 93,776314 59,819126
+Fitness: 2.5799255E9
+ 84,2462 38,847 98,017 82,5858 97,3851
 
 Generation: 28
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.17915891E9
- 36,395729 65,857277 86,458221 94,192543 60,408119
+Fitness: 2.62470118E9
+ 84,214 39,3379 98,725 82,4729 97,3074
 
 Generation: 29
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.19365798E9
- 36,395729 65,907394 85,991745 94,445328 61,27145
+Fitness: 2.64752102E9
+ 84,3623 38,8703 99,7512 83,0363 97,4736
 
 Generation: 30
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.19365798E9
- 36,395729 65,907394 85,991745 94,445328 61,27145
+Fitness: 2.66129203E9
+ 83,2513 40,0537 99,6136 82,7732 96,7945
 
 Generation: 31
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.20420275E9
- 36,236481 66,338409 86,637062 94,647942 61,090496
+Fitness: 2.69985434E9
+ 84,214 39,3379 99,4622 82,5065 99,3111
 
 Generation: 32
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.2096919E9
- 36,236481 66,338409 86,637062 94,647942 61,368965
+Fitness: 2.67610419E9
+ 84,3623 39,9182 99,4399 82,3745 97,0132
 
 Generation: 33
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.23399565E9
- 36,703705 66,275017 86,711998 94,663307 61,800648
+Fitness: 2.71539712E9
+ 84,214 38,7446 99,9803 84,0463 99,0387
 
 Generation: 34
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.24660979E9
- 36,236481 66,338409 86,642471 95,324417 62,789124
+Fitness: 2.78344781E9
+ 84,0634 39,9747 99,4117 83,7298 99,5115
 
 Generation: 35
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.30453619E9
- 36,045914 67,829536 87,620644 95,632919 63,674778
+Fitness: 2.80735206E9
+ 84,7321 39,9186 99,4357 83,8127 99,5912
 
 Generation: 36
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.30308915E9
- 36,045914 67,829536 87,620644 95,632919 63,604145
+Fitness: 2.79116851E9
+ 84,0634 39,9747 99,6634 84,5979 98,5141
 
 Generation: 37
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.32692454E9
- 36,278442 68,576004 88,722748 95,770218 62,771137
+Fitness: 2.80679526E9
+ 85,8107 39,0092 99,53 84,3495 99,8771
 
 Generation: 38
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.3649961E9
- 37,017212 68,091492 88,743744 96,023888 63,550331
+Fitness: 2.82402995E9
+ 83,4692 40,7943 99,2655 84,7183 98,6209
 
 Generation: 39
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.37613952E9
- 36,411179 68,188805 89,423622 96,271782 64,381836
+Fitness: 2.87975578E9
+ 83,4692 40,7943 99,7319 85,4376 99,2538
 
 Generation: 40
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.40834176E9
- 36,929943 67,87735 89,734276 95,943855 65,257286
+Fitness: 2.90827622E9
+ 84,0634 41,1539 98,9531 85,8933 98,9073
 
 Generation: 41
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.4545344E9
- 37,175804 68,04512 89,713921 97,160408 65,965591
+Fitness: 2.9000535E9
+ 83,4692 40,7943 99,7319 85,4376 99,9534
 
 Generation: 42
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.46116493E9
- 37,175804 68,04512 89,713921 97,160408 66,266296
+Fitness: 2.97735987E9
+ 84,0634 41,1539 99,8912 86,4473 99,6631
 
 Generation: 43
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.47938509E9
- 37,175804 68,187416 89,835617 97,113297 66,894333
+Fitness: 2.9844585E9
+ 84,0634 41,1539 99,8912 86,4473 99,9007
 
 Generation: 44
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.52192294E9
- 37,605644 68,737038 90,178139 96,88871 67,386726
+Fitness: 2.98647654E9
+ 83,9809 41,2463 99,8497 86,8089 99,4678
 
 Generation: 45
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.53313702E9
- 37,605644 68,737038 90,953613 96,874619 67,314278
+Fitness: 3.01626035E9
+ 84,0634 41,1539 99,8912 87,488 99,7642
 
 Generation: 46
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.55354918E9
- 37,201969 68,771538 91,986656 97,818443 67,484619
+Fitness: 3.04810445E9
+ 84,0634 41,5843 99,8813 87,3398 99,9532
 
 Generation: 47
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.58279014E9
- 37,605644 68,929115 91,461311 98,104797 68,051849
+Fitness: 3.02764134E9
+ 85,0612 41,3348 99,8737 86,4171 99,7716
 
 Generation: 48
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.6278528E9
- 38,474285 69,41021 90,86161 98,606773 68,035255
+Fitness: 3.05518131E9
+ 84,6172 42,0342 99,5744 87,4876 98,6009
 
 Generation: 49
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.63229414E9
- 38,474285 69,41021 90,86161 98,606773 68,220879
+Fitness: 3.09726592E9
+ 84,6172 42,0342 99,2881 88,14 99,5054
 
 Generation: 50
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.66750349E9
- 38,590324 69,925545 90,55204 99,109985 68,855209
+Fitness: 3.1780631E9
+ 84,8218 42,7316 99,6787 88,307 99,6114
 
 Generation: 51
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.67220646E9
- 38,682472 69,317863 90,907532 99,718445 68,794731
+Fitness: 3.19015066E9
+ 84,8218 42,7316 99,6787 88,307 99,9902
 
 Generation: 52
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.68568358E9
- 38,590324 69,925545 90,55204 99,845268 69,093315
+Fitness: 3.2130048E9
+ 84,7155 42,9888 99,4311 89,0396 99,6524
 
 Generation: 53
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.68167334E9
- 38,590324 69,925545 90,296822 99,515846 69,352585
+Fitness: 3.2229911E9
+ 84,8218 43,1492 99,4931 89,0525 99,3894
 
 Generation: 54
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.6803497E9
- 38,590324 69,925545 89,541885 99,887352 69,622345
+Fitness: 3.263872E9
+ 84,8218 43,5976 98,9879 89,9189 99,1586
 
 Generation: 55
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.68606528E9
- 38,590324 69,925545 90,422241 99,505356 69,44458
+Fitness: 3.2766633E9
+ 84,5894 43,5615 99,4517 90,0256 99,3198
 
 Generation: 56
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.68606528E9
- 38,590324 69,925545 90,422241 99,505356 69,44458
+Fitness: 3.28826957E9
+ 84,5894 43,5615 99,4517 90,1791 99,5019
 
 Generation: 57
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.70264448E9
- 38,590324 69,459053 90,369629 99,962967 70,316139
+Fitness: 3.36978483E9
+ 85,0529 44,292 99,0145 91,8612 98,3459
 
 Generation: 58
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.71755046E9
- 38,590324 71,020645 90,480316 98,673592 70,192612
+Fitness: 3.37130112E9
+ 84,8218 44,1016 99,5314 92,4731 97,9174
 
 Generation: 59
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.7545184E9
- 38,175121 72,696198 90,56324 98,355278 70,976761
+Fitness: 3.41205453E9
+ 84,0813 44,5356 99,2747 93,519 98,1457
 
 Generation: 60
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.7546153E9
- 38,742065 71,868973 91,079063 97,653801 70,851654
+Fitness: 3.48736358E9
+ 84,4059 44,7616 99,2214 94,2124 98,7427
 
 Generation: 61
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.8009911E9
- 39,069069 72,559448 92,066605 97,444862 70,814705
+Fitness: 3.47566029E9
+ 84,4059 44,7616 99,2214 94,2124 98,4114
 
 Generation: 62
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.8009911E9
- 39,069069 72,559448 92,066605 97,444862 70,814705
+Fitness: 3.49244186E9
+ 85,6457 44,2424 98,512 94,4487 99,0602
 
 Generation: 63
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.8027241E9
- 39,069069 72,559448 92,066605 97,547089 70,808563
+Fitness: 3.50618931E9
+ 85,6457 44,2424 98,512 94,4487 99,4501
 
 Generation: 64
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.8109527E9
- 39,069069 73,424263 92,344994 97,290627 70,266785
+Fitness: 3.52253338E9
+ 84,7617 44,402 99,6874 94,363 99,4971
 
 Generation: 65
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.83259712E9
- 39,069069 73,424263 92,344994 97,290627 71,106613
+Fitness: 3.53743283E9
+ 85,3145 44,469 99,9541 93,5428 99,7234
 
 Generation: 66
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.84565427E9
- 39,069069 73,424263 92,344994 97,290627 71,613243
+Fitness: 3.51114496E9
+ 86,1932 44,6478 98,1852 94,2684 98,5742
 
 Generation: 67
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.86472973E9
- 39,069069 73,79393 92,042374 97,922043 71,761902
+Fitness: 3.52721587E9
+ 85,5841 44,9361 99,0793 92,7837 99,7675
 
 Generation: 68
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.85107149E9
- 39,069069 73,020058 91,792374 98,345451 71,876526
+Fitness: 3.57665562E9
+ 85,2554 45,8022 99,4941 93,7894 98,1562
 
 Generation: 69
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.85107149E9
- 39,069069 73,020058 91,792374 98,345451 71,876526
+Fitness: 3.63266688E9
+ 86,03 45,1458 98,8597 95,2936 99,2831
 
 Generation: 70
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.87404224E9
- 39,069069 73,020058 91,792374 99,157791 72,172325
+Fitness: 3.7165271E9
+ 85,4178 46,2662 99,7954 94,4863 99,7346
 
 Generation: 71
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.87404224E9
- 39,069069 73,020058 91,792374 99,157791 72,172325
+Fitness: 3.72351027E9
+ 86,3714 47,3192 99,3899 93,7047 97,8231
 
 Generation: 72
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.92449395E9
- 39,069069 73,57383 92,300003 99,8255 72,663605
+Fitness: 3.74121344E9
+ 86,3714 47,3192 99,3899 93,7047 98,2882
 
 Generation: 73
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.92449395E9
- 39,069069 73,57383 92,300003 99,8255 72,663605
+Fitness: 3.67350016E9
+ 85,4178 46,3868 98,9908 94,9123 98,6777
 
 Generation: 74
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.92449395E9
- 39,069069 73,57383 92,300003 99,8255 72,663605
+Fitness: 3.74805299E9
+ 85,5888 46,6616 99,5286 94,7878 99,4784
 
 Generation: 75
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.9797824E9
- 38,952427 74,465279 93,159973 99,973122 73,28524
+Fitness: 3.74924467E9
+ 85,7583 47,1609 98,8685 94,8082 98,8966
 
 Generation: 76
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 1.97935334E9
- 39,186661 74,59874 93,519485 99,013924 73,123199
+Fitness: 3.77467546E9
+ 85,7583 47,1609 98,8685 94,8082 99,5674
 
 Generation: 77
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.00244339E9
- 39,186661 74,59874 93,868134 98,865387 73,812187
+Fitness: 3.84153267E9
+ 85,1559 47,7755 99,6022 95,6105 99,1538
 
 Generation: 78
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.05851699E9
- 39,33289 74,575394 94,826698 99,440338 74,423454
+Fitness: 3.86352333E9
+ 85,8355 48,0723 98,8002 95,3948 99,3435
 
 Generation: 79
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.0628535E9
- 39,33289 74,877068 95,64695 99,051765 73,931641
+Fitness: 3.84255923E9
+ 86,3543 47,086 99,2895 96,3201 98,8153
 
 Generation: 80
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.0628535E9
- 39,33289 74,877068 95,64695 99,051765 73,931641
+Fitness: 3.8968809E9
+ 85,7583 48,1912 99,0789 96,1183 99,0116
 
 Generation: 81
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.1018089E9
- 39,587143 75,00296 95,956604 99,140015 74,41095
+Fitness: 3.91204813E9
+ 85,8355 47,3282 99,504 97,271 99,4933
 
 Generation: 82
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.11952717E9
- 39,440659 74,872711 95,473206 99,553864 75,514725
+Fitness: 3.94097203E9
+ 86,2409 47,8073 99,1164 97,2538 99,1618
 
 Generation: 83
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.14402778E9
- 39,440659 74,988335 95,890564 99,641983 75,870735
+Fitness: 3.95743232E9
+ 85,6342 48,258 99,6848 97,0952 98,9395
 
 Generation: 84
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.14071808E9
- 39,440659 74,988335 95,890564 99,375656 75,956635
+Fitness: 4.03173325E9
+ 85,9253 49,1614 99,7521 96,8374 98,8055
 
 Generation: 85
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.14947584E9
- 39,440659 74,988335 95,890564 99,48632 76,182541
+Fitness: 4.15246643E9
+ 86,8611 49,8852 99,6818 97,2248 98,8818
 
 Generation: 86
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.19609011E9
- 39,766651 75,494942 95,846298 99,876511 76,414291
+Fitness: 4.19950541E9
+ 86,8611 49,8852 99,6818 97,3826 99,8398
 
 Generation: 87
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.22454144E9
- 39,766651 76,036926 96,377426 99,907387 76,405388
+Fitness: 4.19721933E9
+ 86,8611 49,8852 99,6818 97,1737 100
 
 Generation: 88
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.25977037E9
- 39,750095 77,123428 96,497086 99,766846 76,566605
+Fitness: 4.19251558E9
+ 85,9376 50,1874 99,92 97,6532 99,6226
 
 Generation: 89
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.24794726E9
- 39,750095 77,123428 96,629318 99,675003 76,131866
+Fitness: 4.19887002E9
+ 86,8611 49,8852 99,6818 97,3826 99,8247
 
 Generation: 90
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.28409421E9
- 39,750095 77,221336 97,135178 99,785461 76,770561
+Fitness: 4.19922662E9
+ 86,9757 49,9529 99,9138 96,9864 99,7411
 
 Generation: 91
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.30613478E9
- 39,860149 77,058388 97,314911 99,945076 77,194267
+Fitness: 4.20923392E9
+ 86,9757 49,7676 99,8069 97,9833 99,4365
 
 Generation: 92
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.32006195E9
- 39,941105 77,322968 97,162506 99,654121 77,584869
+Fitness: 4.21324262E9
+ 86,9757 49,7676 99,8069 97,9833 99,5312
 
 Generation: 93
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.32850483E9
- 40,356316 77,429924 96,109055 99,771286 77,7118
+Fitness: 4.24969293E9
+ 87,2807 50,604 99,6586 97,1825 99,3464
 
 Generation: 94
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.36547891E9
- 41,314426 77,195 95,934105 99,888817 77,399529
+Fitness: 4.272352E9
+ 87,4435 50,2075 99,2103 98,3463 99,737
 
 Generation: 95
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.36547891E9
- 41,314426 77,195 95,934105 99,888817 77,399529
+Fitness: 4.26137318E9
+ 86,9655 50,1744 98,8406 99,2516 99,5514
 
 Generation: 96
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.37034394E9
- 41,314426 77,195 95,934105 99,345879 77,982582
+Fitness: 4.3593016E9
+ 86,6253 51,416 99,9594 98,2172 99,6925
 
 Generation: 97
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.40139187E9
- 41,695751 77,587662 95,409958 99,662003 78,064796
+Fitness: 4.3341327E9
+ 86,6253 51,416 99,5345 98,1322 99,6262
 
 Generation: 98
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.37728E9
- 40,921841 77,818741 95,528191 99,225395 78,756531
+Fitness: 4.3593697E9
+ 86,7388 52,0879 99,0989 98,2718 99,0776
 
 Generation: 99
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.37725594E9
- 40,921841 77,818741 95,196075 98,947823 79,252197
+Fitness: 4.3855841E9
+ 87,2807 51,6302 99,3628 98,3183 99,6201
 
 Generation: 100
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.47211238E9
- 41,742447 78,315193 95,979874 99,342384 79,310287
+Fitness: 4.43283E9
+ 87,2807 51,6302 99,3628 99,5255 99,4719
 
 Generation: 101
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.48329472E9
- 41,742447 78,315193 95,979874 99,342384 79,669037
+Fitness: 4.4483584E9
+ 87,2807 51,6547 99,8418 99,5531 99,2668
 
 Generation: 102
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.55100339E9
- 41,87682 79,603966 95,922203 99,925255 79,83773
+Fitness: 4.4225567E9
+ 87,2807 51,6547 99,8418 98,9865 99,2559
 
 Generation: 103
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.568448E9
- 41,742447 78,317688 97,029137 99,882195 81,06675
+Fitness: 4.4131958E9
+ 87,2807 51,9519 99,2197 98,1791 99,9118
 
 Generation: 104
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.60679194E9
- 41,87682 79,603966 97,033646 99,559891 80,945213
+Fitness: 4.4423332E9
+ 87,4403 52,7803 99,884 97,9223 98,4124
 
 Generation: 105
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.61496934E9
- 41,87682 80,142838 97,647011 99,813217 79,943138
+Fitness: 4.4611343E9
+ 87,2807 51,6302 99,7285 99,3767 99,8894
 
 Generation: 106
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.61324877E9
- 41,87682 80,372749 98,225555 99,567543 79,388199
+Fitness: 4.4611343E9
+ 87,2807 51,6302 99,7285 99,3767 99,8894
 
 Generation: 107
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.61567565E9
- 41,87682 80,372749 98,225555 99,567543 79,461929
+Fitness: 4.5014497E9
+ 87,2807 52,063 99,5215 99,6281 99,9093
 
 Generation: 108
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.63446861E9
- 41,87682 81,005737 97,341499 99,374374 80,284386
+Fitness: 4.490539E9
+ 87,2807 52,063 99,5215 99,6281 99,6672
 
 Generation: 109
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.65942656E9
- 42,191017 79,973969 97,912239 99,793228 80,664291
+Fitness: 4.4807219E9
+ 87,021 52,6525 99,7805 99,1018 98,8958
 
 Generation: 110
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.68772019E9
- 42,191017 80,70536 96,913513 99,642372 81,739754
+Fitness: 4.493802E9
+ 87,021 52,6525 99,7805 99,3053 98,9812
 
 Generation: 111
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.71143936E9
- 42,191017 79,973969 97,912239 99,488419 82,493881
+Fitness: 4.493802E9
+ 87,021 52,6525 99,7805 99,3053 98,9812
 
 Generation: 112
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.73862989E9
- 42,191017 80,1343 97,624565 99,703094 83,219887
+Fitness: 4.4838815E9
+ 88,2429 51,8346 99,463 98,7685 99,7871
 
 Generation: 113
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.74579302E9
- 42,191017 79,769684 98,162025 99,973671 83,134399
+Fitness: 4.5838029E9
+ 88,2429 52,6629 99,571 99,1562 99,9053
 
 Generation: 114
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.77002419E9
- 42,937889 80,581642 97,992737 99,235947 82,327301
+Fitness: 4.6181734E9
+ 88,2429 53,159 98,853 99,7039 99,8876
 
 Generation: 115
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.78353997E9
- 42,937889 80,581642 97,992737 99,235947 82,728996
+Fitness: 4.7437363E9
+ 88,8642 53,9919 99,0331 99,9287 99,9067
 
 Generation: 116
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.80922394E9
- 42,937889 80,581642 98,314995 99,215096 83,236153
+Fitness: 4.7028721E9
+ 88,8642 53,9919 99,1166 99,2665 99,6228
 
 Generation: 117
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.82606336E9
- 42,933922 80,8592 98,4543 99,157379 83,385818
+Fitness: 4.7060265E9
+ 88,8642 53,9919 99,1166 99,2665 99,6896
 
 Generation: 118
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.82606336E9
- 42,933922 80,8592 98,4543 99,157379 83,385818
+Fitness: 4.7369108E9
+ 88,8642 54,6969 98,098 99,5842 99,7597
 
 Generation: 119
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.84412186E9
- 42,937889 80,581642 99,106514 98,79229 83,954918
+Fitness: 4.7504031E9
+ 88,8932 54,7063 99,2785 98,5447 99,8472
 
 Generation: 120
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.84531738E9
- 43,088573 80,315994 99,725266 98,654137 83,56916
+Fitness: 4.7725998E9
+ 88,8932 54,7063 99,2785 99,2653 99,5856
 
 Generation: 121
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.86668518E9
- 42,933922 80,8592 99,399353 98,256905 84,548012
+Fitness: 4.8117089E9
+ 88,8932 55,0181 99,074 99,6409 99,6616
 
 Generation: 122
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.89310029E9
- 43,088573 81,499916 99,191795 98,450737 84,362511
+Fitness: 4.8526817E9
+ 89,562 54,882 99,0432 99,8289 99,8499
 
 Generation: 123
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.91036211E9
- 43,088573 81,838982 98,816521 99,231049 84,168106
+Fitness: 4.8526817E9
+ 89,562 54,882 99,0432 99,8289 99,8499
 
 Generation: 124
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.91036211E9
- 43,088573 81,838982 98,816521 99,231049 84,168106
+Fitness: 4.85395E9
+ 88,5601 55,6754 99,1445 99,4174 99,8764
 
 Generation: 125
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.94809037E9
- 43,088573 82,658455 98,764999 99,379417 84,331902
+Fitness: 4.879913E9
+ 88,5601 55,6754 99,7063 99,3155 99,9473
 
 Generation: 126
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.93038643E9
- 43,34042 81,990669 98,768082 98,776001 84,52774
+Fitness: 4.913301E9
+ 89,562 55,6482 98,908 99,7866 99,8838
 
 Generation: 127
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.94021939E9
- 43,088573 81,838982 98,816521 99,231049 85,031586
+Fitness: 4.9378473E9
+ 89,562 56,8511 99,0896 99,281 98,5783
 
 Generation: 128
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.95635302E9
- 43,088573 81,838982 98,816521 98,606689 86,039528
+Fitness: 4.9250217E9
+ 88,863 56,6403 99,4175 99,0774 99,34
 
 Generation: 129
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.97317658E9
- 42,933922 82,07354 98,93364 98,285637 86,772667
+Fitness: 4.9879491E9
+ 88,435 57,6374 99,3248 99,3204 99,1969
 
 Generation: 130
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.97968845E9
- 43,008022 81,534813 99,400703 98,625252 86,676369
+Fitness: 5.0254761E9
+ 88,1685 57,9953 99,0972 99,9015 99,2745
 
 Generation: 131
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.98154598E9
- 43,008022 81,534813 99,400703 98,625252 86,7304
+Fitness: 5.0042629E9
+ 88,881 57,5802 99,4941 99,9247 98,3531
 
 Generation: 132
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 2.99452774E9
- 43,008022 81,534813 99,12545 98,569946 87,398926
+Fitness: 5.0168714E9
+ 88,881 57,5802 99,4941 99,7322 98,7913
 
 Generation: 133
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.03560474E9
- 43,008022 81,534813 99,400703 99,015823 87,954605
+Fitness: 5.0508687E9
+ 88,881 57,5802 99,4941 99,7322 99,4607
 
 Generation: 134
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.06149939E9
- 43,008022 81,534813 99,005775 99,468628 88,653305
+Fitness: 5.0494689E9
+ 88,881 57,5802 99,2 99,787 99,6731
 
 Generation: 135
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.09480883E9
- 43,008022 81,748413 98,889206 99,841309 89,155029
+Fitness: 5.0494689E9
+ 88,881 57,5802 99,2 99,787 99,6731
 
 Generation: 136
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.14311194E9
- 43,008022 81,985703 99,361649 99,454865 90,204346
+Fitness: 5.0474906E9
+ 88,881 57,5802 99,5772 99,1005 99,9443
 
 Generation: 137
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.1771712E9
- 43,008022 82,798462 99,243675 99,203629 90,623009
+Fitness: 5.1311263E9
+ 90,3961 58,153 98,6485 99,5301 99,4135
 
 Generation: 138
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.24447744E9
- 43,434425 82,505569 99,560272 99,650711 91,255898
+Fitness: 5.1680952E9
+ 90,3961 58,153 99,2099 99,6822 99,4113
 
 Generation: 139
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.22655795E9
- 43,008022 82,430397 99,820465 99,650238 91,496536
+Fitness: 5.1458058E9
+ 90,3961 58,153 99,2099 99,3827 99,2808
 
 Generation: 140
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.23474099E9
- 43,062271 82,5784 99,866829 99,545082 91,502945
+Fitness: 5.1746104E9
+ 90,3961 58,153 99,2099 99,2729 99,947
 
 Generation: 141
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.2583191E9
- 43,062271 82,525375 99,573036 99,577156 92,471458
+Fitness: 5.2287642E9
+ 89,5061 59,241 98,7148 99,9141 99,9804
 
 Generation: 142
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.30660966E9
- 43,256813 83,187897 99,697067 99,584961 92,553345
+Fitness: 5.2205107E9
+ 89,5061 59,241 98,7148 99,9141 99,8226
 
 Generation: 143
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.32802944E9
- 43,256813 84,211563 99,387772 99,038292 92,816414
+Fitness: 5.2259333E9
+ 90,6379 59,0724 98,1668 99,6632 99,7632
 
 Generation: 144
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.36042189E9
- 43,062271 85,058792 99,490898 98,899506 93,239555
+Fitness: 5.3181962E9
+ 90,6379 59,2644 99,2589 99,9886 99,7565
 
 Generation: 145
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.33884749E9
- 43,256813 83,972099 99,374664 99,413712 93,043297
+Fitness: 5.3181962E9
+ 90,6379 59,2644 99,2589 99,9886 99,7565
 
 Generation: 146
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.33884749E9
- 43,256813 83,972099 99,374664 99,413712 93,043297
+Fitness: 5.3813919E9
+ 90,6379 59,9998 99,5289 99,9757 99,447
 
 Generation: 147
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.33393894E9
- 43,256813 83,972099 99,374664 98,925476 93,365036
+Fitness: 5.3616266E9
+ 90,3961 60,2703 98,978 99,5824 99,8441
 
 Generation: 148
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.33393894E9
- 43,256813 83,972099 99,374664 98,925476 93,365036
+Fitness: 5.438784E9
+ 90,6379 60,7497 99,9408 99,5589 99,2716
 
 Generation: 149
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.33393894E9
- 43,256813 83,972099 99,374664 98,925476 93,365036
+Fitness: 5.4588923E9
+ 90,6379 60,7497 99,9408 99,5589 99,6386
 
 Generation: 150
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.36329651E9
- 43,256813 83,972099 99,374664 98,925476 94,18718
+Fitness: 5.4934717E9
+ 90,9932 60,8759 99,9405 99,5067 99,7238
 
 Generation: 151
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.38103885E9
- 43,256813 85,002251 98,722076 99,108147 93,981331
+Fitness: 5.4705398E9
+ 91,286 60,3729 99,9079 99,8534 99,4995
 
 Generation: 152
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.38711245E9
- 42,615864 85,666267 99,281807 99,708679 93,722923
+Fitness: 5.5446559E9
+ 90,6379 61,4418 99,8897 99,9701 99,7034
 
 Generation: 153
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.41933133E9
- 43,256813 86,262604 98,780182 99,667839 93,076332
+Fitness: 5.5373379E9
+ 90,6379 61,4418 99,8897 99,9701 99,5718
 
 Generation: 154
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.41933133E9
- 43,256813 86,262604 98,780182 99,667839 93,076332
+Fitness: 5.6238694E9
+ 91,1423 62,3792 99,9623 99,6867 99,2663
 
 Generation: 155
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.47958221E9
- 43,256813 87,183731 99,464371 99,490059 93,23735
+Fitness: 5.6876938E9
+ 91,3982 62,9233 99,9639 99,6084 99,3224
 
 Generation: 156
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.44779469E9
- 43,280556 86,837448 99,68425 99,579323 92,41571
+Fitness: 5.6876938E9
+ 91,3982 62,9233 99,9639 99,6084 99,3224
 
 Generation: 157
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.44708352E9
- 44,127098 86,54583 98,829063 99,649399 91,651787
+Fitness: 5.7129098E9
+ 91,3982 62,9233 99,9639 99,5552 99,816
 
 Generation: 158
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.4333929E9
- 44,127098 86,54583 98,214302 99,529945 91,969421
+Fitness: 5.6687616E9
+ 91,3982 62,9233 99,7728 99,2947 99,4948
 
 Generation: 159
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.49355315E9
- 44,392628 87,540398 97,879379 99,16935 92,614571
+Fitness: 5.7811758E9
+ 90,9467 64,3606 99,9607 98,9716 99,8319
 
 Generation: 160
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.4940224E9
- 44,392628 87,540398 97,879379 99,668129 92,163467
+Fitness: 5.8470953E9
+ 91,5645 64,3551 99,689 99,8305 99,7056
 
 Generation: 161
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.52207718E9
- 44,392628 87,547302 97,81237 99,77388 92,861259
+Fitness: 5.8675087E9
+ 91,4848 64,6967 99,662 99,7757 99,6938
 
 Generation: 162
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.5260119E9
- 44,392628 87,540398 97,879379 99,457268 93,20446
+Fitness: 5.8622403E9
+ 91,4848 64,6967 99,1958 99,9931 99,8549
 
 Generation: 163
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.5842473E9
- 44,850506 87,194206 98,331291 99,231865 93,929092
+Fitness: 5.9423908E9
+ 91,9555 65,8372 99,7699 99,7747 98,6036
 
 Generation: 164
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.5493911E9
- 44,392628 87,045494 97,0355 99,993423 94,66613
+Fitness: 6.0079498E9
+ 91,9555 65,8372 99,7699 99,7788 99,6873
 
 Generation: 165
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.6228311E9
- 44,392628 87,540398 98,090782 99,512039 95,50473
+Fitness: 6.0079498E9
+ 91,9555 65,8372 99,7699 99,7788 99,6873
 
 Generation: 166
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.69325901E9
- 44,392628 87,459686 99,412575 99,837158 95,842354
+Fitness: 6.0213033E9
+ 91,9828 66,3042 99,4836 99,9334 99,3073
 
 Generation: 167
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.69488768E9
- 44,392628 87,459686 99,412575 99,372665 96,332809
+Fitness: 6.0265892E9
+ 92,5814 66,0821 99,4295 99,3975 99,6721
 
 Generation: 168
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.75179392E9
- 44,61721 87,575287 99,594452 99,720245 96,67997
+Fitness: 6.0411602E9
+ 92,5814 66,0821 99,4295 99,3975 99,9131
 
 Generation: 169
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.75373824E9
- 44,392628 88,119652 99,587128 99,824196 96,525337
+Fitness: 6.0297257E9
+ 92,5814 66,569 98,9037 99,597 99,3215
 
 Generation: 170
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.78327424E9
- 44,61721 88,242363 99,073349 99,859642 97,127319
+Fitness: 6.0815529E9
+ 92,5814 66,569 98,9037 99,8919 99,8794
 
 Generation: 171
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.81658368E9
- 44,432411 89,37886 99,602455 99,662941 96,813599
+Fitness: 6.0434493E9
+ 90,6892 68,5359 98,5847 99,2993 99,3244
 
 Generation: 172
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.84152704E9
- 44,432411 89,37886 99,602455 99,662941 97,446327
+Fitness: 6.084139E9
+ 92,3942 67,443 98,5609 99,5789 99,4822
 
 Generation: 173
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.89069261E9
- 44,432411 90,219742 99,895798 99,697105 97,45311
+Fitness: 6.0670572E9
+ 92,3942 67,443 98,5609 99,5789 99,2029
 
 Generation: 174
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.88661094E9
- 44,432411 90,293159 99,278091 99,876457 97,701172
+Fitness: 6.0619346E9
+ 92,3942 67,443 98,5609 99,5789 99,1192
 
 Generation: 175
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.88661094E9
- 44,432411 90,293159 99,278091 99,876457 97,701172
+Fitness: 6.1027359E9
+ 92,3942 68,5117 98,411 99,3685 98,5876
 
 Generation: 176
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 3.9669847E9
- 45,164997 90,910233 99,127846 99,153969 98,296944
+Fitness: 6.1685965E9
+ 92,8258 68,6294 98,5295 99,537 98,7319
 
 Generation: 177
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.0178473E9
- 44,609829 91,368942 99,711739 99,919846 98,938713
+Fitness: 6.2308419E9
+ 92,8258 68,85 98,41 99,6666 99,3997
 
 Generation: 178
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.03132186E9
- 44,609829 92,103241 99,15036 99,944168 99,01255
+Fitness: 6.2308419E9
+ 92,8258 68,85 98,41 99,6666 99,3997
 
 Generation: 179
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.0537472E9
- 44,450722 92,508377 99,621613 99,905411 99,049942
+Fitness: 6.2405929E9
+ 92,8258 68,85 98,41 99,7712 99,4508
 
 Generation: 180
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.10271821E9
- 45,217396 92,562401 99,641457 99,547195 98,824005
+Fitness: 6.2653491E9
+ 92,8258 68,85 98,41 99,7712 99,8454
 
 Generation: 181
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.15304858E9
- 45,217396 92,562401 99,962616 99,608383 99,653687
+Fitness: 6.3610112E9
+ 94,0124 69,1954 99,1183 99,3321 99,3162
 
 Generation: 182
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.15304858E9
- 45,217396 92,562401 99,962616 99,608383 99,653687
+Fitness: 6.2913311E9
+ 94,0124 69,1954 98,1958 99,0665 99,417
 
 Generation: 183
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.15438566E9
- 45,217396 92,562401 99,982964 99,820534 99,453667
+Fitness: 6.344471E9
+ 92,8005 69,0012 99,7668 99,7837 99,5274
 
 Generation: 184
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.16001382E9
- 45,217396 92,562401 99,657532 99,887329 99,846786
+Fitness: 6.4620692E9
+ 93,4337 69,9708 99,7713 99,4346 99,634
 
 Generation: 185
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.16001382E9
- 45,217396 92,562401 99,657532 99,887329 99,846786
+Fitness: 6.3477074E9
+ 92,8075 69,892 99,3729 99,6072 98,8662
 
 Generation: 186
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.18931712E9
- 45,217396 93,299393 99,923492 99,573822 99,803581
+Fitness: 6.4309289E9
+ 94,9283 69,4381 99,2469 98,7828 99,5134
 
 Generation: 187
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.17364173E9
- 45,217396 93,299393 99,808304 99,420021 99,698883
+Fitness: 6.411094E9
+ 94,9283 69,4381 99,2469 98,8945 99,0944
 
 Generation: 188
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.18565197E9
- 45,355404 93,614441 99,516922 99,587082 99,469803
+Fitness: 6.43347E9
+ 94,9283 69,8459 99,417 98,2123 99,3761
 
 Generation: 189
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.18882381E9
- 45,355404 93,614441 99,516922 99,587082 99,545181
+Fitness: 6.5315978E9
+ 94,9893 69,6405 99,6462 99,8971 99,1903
 
 Generation: 190
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.20060595E9
- 45,760735 92,991173 99,691452 99,706474 99,310684
+Fitness: 6.5224233E9
+ 94,9283 70,6831 99,9093 98,4782 98,7988
 
 Generation: 191
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.21561114E9
- 45,760735 92,991173 99,691452 99,706474 99,665436
+Fitness: 6.596629E9
+ 94,9283 70,6831 99,9093 99,4689 98,9276
 
 Generation: 192
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.21561114E9
- 45,760735 92,991173 99,691452 99,706474 99,665436
+Fitness: 6.640385E9
+ 94,7138 72,0986 99,7178 98,0513 99,4551
 
 Generation: 193
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.21148544E9
- 45,760735 92,991173 99,691452 99,706474 99,567894
+Fitness: 6.6581719E9
+ 94,7138 72,6145 99,5792 99,3936 97,8118
 
 Generation: 194
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.23783706E9
- 46,247681 93,220665 99,189568 99,58876 99,509781
+Fitness: 6.639319E9
+ 94,7138 72,6145 99,5792 99,3936 97,5349
 
 Generation: 195
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.25421542E9
- 46,247681 93,220665 99,67347 99,960625 99,039581
+Fitness: 6.770666E9
+ 94,7138 72,6145 99,1772 99,5327 99,7281
 
 Generation: 196
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.26944691E9
- 46,247681 93,220665 99,67347 99,960625 99,394173
+Fitness: 6.770666E9
+ 94,7138 72,6145 99,1772 99,5327 99,7281
 
 Generation: 197
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.26944691E9
- 46,247681 93,220665 99,67347 99,960625 99,394173
+Fitness: 6.770666E9
+ 94,7138 72,6145 99,1772 99,5327 99,7281
 
 Generation: 198
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.27923379E9
- 46,247681 93,220665 99,681427 99,845566 99,728851
+Fitness: 6.7332198E9
+ 94,9048 72,545 99,868 99,1945 98,722
 
 Generation: 199
 Best Individual:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.28392499E9
- 46,247681 93,653023 99,410545 99,780876 99,712677
+Fitness: 6.7872963E9
+ 94,9048 72,545 99,5992 99,2718 99,7057
 
 Best Individual of Run:
 Subpopulation 0:
 Evaluated: T
-Fitness: 4.28392499E9
- 46,247681 93,653023 99,410545 99,780876 99,712677
+Fitness: 6.7872963E9
+ 94,9048 72,545 99,5992 99,2718 99,7057

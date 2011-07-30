@@ -115,6 +115,9 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 			this.indTrace[1][1] = ind2.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind1);
+			this.indStatistics[1] = ind1.indStatistics[1];
+			this.indStatistics[2] = ind1.indStatistics[2];
+			this.indStatistics[3] = ind1.indStatistics[3];
 			
 		}
 		else
@@ -126,6 +129,9 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 			this.indTrace[1][1] = ind1.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind2);
+			this.indStatistics[1] = ind2.indStatistics[1];
+			this.indStatistics[2] = ind2.indStatistics[2];
+			this.indStatistics[3] = ind2.indStatistics[3];
 		}
 		
 		
@@ -137,6 +143,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 			
 			((BitVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
 			
+			((BitVectorIndividualStat)ind).indStatistics = ind1.indStatistics.clone();
 			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
 		}
@@ -146,6 +153,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 			
 			((BitVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
 			
+			((BitVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
 

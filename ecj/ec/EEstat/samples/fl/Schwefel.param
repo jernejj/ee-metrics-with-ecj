@@ -2,23 +2,24 @@
 parent.0 =	../../../es/es.params
 
 breed =              ec.es.MuPlusLambdaBreeder
-es.mu.0 =            5 
+es.mu.0 =            5
 es.lambda.0 =        15
 pop.subpop.0.size =  20
 generations =        100
 
-stat.file		= SphereOut.stat
+stat.file		= SchwefelOut.stat
 
 pop.subpop.0.species.pipe = ec.vector.breed.VectorCrossoverPipeline
 pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorMutationPipeline
 pop.subpop.0.species.pipe.source.0.source.0 = ec.es.ESSelection
+
 pop.subpop.0.species.pipe.source.1	= ec.select.TournamentSelection
-select.tournament.size		= 2
+select.tournament.size = 2
 
 pop.subpop.0.species =                  ec.vector.FloatVectorSpecies
 pop.subpop.0.species.ind =              ec.EEstat.FloatVectorIndividualStat
 pop.subpop.0.species.ind.fraction-digits = 6
-pop.subpop.0.species.fitness = 		ec.gp.koza.KozaFitness
+pop.subpop.0.species.fitness = 		    ec.gp.koza.KozaFitness
 
 # Per-gene mutation probability of 1.0
 pop.subpop.0.species.mutation-prob = 1.0
@@ -28,16 +29,16 @@ pop.subpop.0.species.mutation-type = gauss
 pop.subpop.0.species.mutation-stdev = 0.5
 
 pop.subpop.0.species.genome-size =      2
-pop.subpop.0.species.min-gene = -5.12
-pop.subpop.0.species.max-gene = 5.12
+pop.subpop.0.species.min-gene = -500.0
+pop.subpop.0.species.max-gene = 500.0
 
 # One-point crossover
 pop.subpop.0.species.crossover-type = one
 
 
-eval.problem = ec.EEstat.samples.fl.Sphere
+eval.problem = ec.EEstat.samples.fl.Schwefel
 
 
 stat.num-children       = 1
 stat.child.0            = ec.EEstat.EEStatPrint
-stat.child.0.stat-file  = SphereEEstat.stat
+stat.child.0.stat-file  = SchwefelEEstat.stat

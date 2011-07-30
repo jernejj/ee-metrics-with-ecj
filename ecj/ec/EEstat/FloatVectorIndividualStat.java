@@ -13,8 +13,10 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 {
 	public int indTrace[][];
 	public int indStatistics[];
+	private int fractNums;
 	
 	public static final String P_FLOATVECTORINDIVIDUALSTAT = "float-vect-ind-stat";
+	public static final String P_DOUBLEVECTORPRECISONOUTPUT = "fraction-digits";
     
     public Parameter defaultBase()
     {
@@ -50,6 +52,11 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	public void setup(final EvolutionState state, final Parameter base) 
 	{
 		super.setup(state, base);
+		
+		Parameter def = defaultBase();
+		
+		fractNums = state.parameters.getIntWithDefault(base.push(P_DOUBLEVECTORPRECISONOUTPUT), 
+													   def.push(P_DOUBLEVECTORPRECISONOUTPUT), 3);
 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
@@ -93,6 +100,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		
 	}
 	
+	
 	public void defaultCrossover(EvolutionState state, int thread, VectorIndividual ind)
 	{
 		FloatVectorIndividualStat ind1 = (FloatVectorIndividualStat) this.clone();
@@ -115,6 +123,9 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			this.indTrace[1][1] = ind2.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind1);
+			this.indStatistics[1] = ind1.indStatistics[1];
+			this.indStatistics[2] = ind1.indStatistics[2];
+			this.indStatistics[3] = ind1.indStatistics[3];
 			
 		}
 		else
@@ -126,6 +137,9 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			this.indTrace[1][1] = ind1.indTrace[2][1];
 			
 			this.indStatistics[0] = this.dimmensionChanged(ind2);
+			this.indStatistics[1] = ind2.indStatistics[1];
+			this.indStatistics[2] = ind2.indStatistics[2];
+			this.indStatistics[3] = ind2.indStatistics[3];
 		}
 		
 		
@@ -137,6 +151,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			
 			((FloatVectorIndividualStat)ind).indTrace[1] = ind2.indTrace[2].clone();
 			
+			((FloatVectorIndividualStat)ind).indStatistics = ind1.indStatistics.clone();
 			((FloatVectorIndividualStat)ind).indStatistics[0] = ((FloatVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
 		}
@@ -146,9 +161,10 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			
 			((FloatVectorIndividualStat)ind).indTrace[1] = ind1.indTrace[2].clone();
 			
+			((FloatVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((FloatVectorIndividualStat)ind).indStatistics[0] = ((FloatVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
-
+		
 	}
 	
 	public void defaultMutate(EvolutionState state, int thread)
@@ -185,7 +201,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	public String genotypeToStringForHumans()
     {
 		DecimalFormat decForm = new DecimalFormat();
-		decForm.setMaximumFractionDigits(6);
+		decForm.setMaximumFractionDigits(fractNums);
 		
 	    String s = "";
 	    for (int i = 0; i < genome.length; i++)

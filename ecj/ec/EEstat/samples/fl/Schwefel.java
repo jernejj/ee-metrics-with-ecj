@@ -7,15 +7,16 @@ import ec.EEstat.FloatVectorIndividualStat;
 import ec.gp.koza.KozaFitness;
 import ec.simple.SimpleProblemForm;
 
-public class Sphere extends Problem implements SimpleProblemForm 
+public class Schwefel extends Problem implements SimpleProblemForm 
 {
 
 	@Override
 	public void evaluate(EvolutionState state, Individual ind,
-			int subpopulation, int threadnum) 
+			int subpopulation, int threadnum)
 	{
-        
-        if( !( ind instanceof FloatVectorIndividualStat ) )
+		
+		
+		if( !( ind instanceof FloatVectorIndividualStat ) )
             state.output.fatal( "The individuals for this problem should be DoubleVectorIndividuals." );
 
         float[] genome = ((FloatVectorIndividualStat)ind).genome;
@@ -25,8 +26,10 @@ public class Sphere extends Problem implements SimpleProblemForm
         // Compute the Sphere function for our genome
        for(int i = 0; i < len; i++)
        {
-	        value += Math.pow(genome[i], 2);
+	        value += genome[i] * Math.sin( Math.sqrt(Math.abs(genome[i])) );
        }
+       
+       value = (float)418.9829 * len + value;
 
         ((KozaFitness)(ind.fitness)).setStandardizedFitness(state, value);
     

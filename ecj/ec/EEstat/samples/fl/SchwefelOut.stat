@@ -1,0 +1,706 @@
+
+Generation: 0
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=350.98105 Adjusted=0.0028410621 Hits=0
+ 126,740784 -399,880646
+
+Generation: 1
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=350.98105 Adjusted=0.0028410621 Hits=0
+ 126,740784 -399,880646
+
+Generation: 2
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=347.15033 Adjusted=0.0028723225 Hits=0
+ 125,567535 -400,574066
+
+Generation: 3
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=276.8947 Adjusted=0.0035984851 Hits=0
+ 330,919952 -398,719452
+
+Generation: 4
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=276.8947 Adjusted=0.0035984851 Hits=0
+ 330,919952 -398,719452
+
+Generation: 5
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=274.7434 Adjusted=0.0036265599 Hits=0
+ 330,846283 -399,038147
+
+Generation: 6
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=273.47852 Adjusted=0.0036432724 Hits=0
+ 330,668274 -399,057098
+
+Generation: 7
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=267.1355 Adjusted=0.0037294577 Hits=0
+ 330,044037 -399,503967
+
+Generation: 8
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=262.84454 Adjusted=0.0037901106 Hits=0
+ 329,444275 -399,597443
+
+Generation: 9
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=257.7218 Adjusted=0.0038651556 Hits=0
+ 329,049133 -400,124359
+
+Generation: 10
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=257.00214 Adjusted=0.0038759368 Hits=0
+ 329,444275 -400,776855
+
+Generation: 11
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=249.91058 Adjusted=0.0039854837 Hits=0
+ 328,166595 -400,610901
+
+Generation: 12
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=249.68549 Adjusted=0.0039890623 Hits=0
+ 328,571564 -401,171661
+
+Generation: 13
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=244.849 Adjusted=0.0040675374 Hits=0
+ 327,797028 -401,202179
+
+Generation: 14
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=241.76526 Adjusted=0.0041192058 Hits=0
+ 327,949097 -402,062988
+
+Generation: 15
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=240.50256 Adjusted=0.0041407426 Hits=0
+ 327,979523 -402,383392
+
+Generation: 16
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=233.43219 Adjusted=0.004265626 Hits=0
+ 326,673584 -402,246216
+
+Generation: 17
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=226.01038 Adjusted=0.004405085 Hits=0
+ 325,410522 -402,31723
+
+Generation: 18
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=226.01038 Adjusted=0.004405085 Hits=0
+ 325,410522 -402,31723
+
+Generation: 19
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=220.28448 Adjusted=0.0045190696 Hits=0
+ 325,410522 -403,634949
+
+Generation: 20
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=220.27234 Adjusted=0.0045193178 Hits=0
+ 325,73822 -404,074341
+
+Generation: 21
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=217.23376 Adjusted=0.0045822426 Hits=0
+ 325,404846 -404,368622
+
+Generation: 22
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=213.12183 Adjusted=0.0046702386 Hits=0
+ 325,410522 -405,427612
+
+Generation: 23
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=213.12183 Adjusted=0.0046702386 Hits=0
+ 325,410522 -405,427612
+
+Generation: 24
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=209.08075 Adjusted=0.0047600744 Hits=0
+ 324,949554 -405,836731
+
+Generation: 25
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=209.08075 Adjusted=0.0047600744 Hits=0
+ 324,949554 -405,836731
+
+Generation: 26
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=205.17853 Adjusted=0.0048501655 Hits=0
+ 324,1409 -405,731445
+
+Generation: 27
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=204.61212 Adjusted=0.0048635267 Hits=0
+ 324,604736 -406,562103
+
+Generation: 28
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=195.75055 Adjusted=0.005082578 Hits=0
+ 323,425903 -407,358704
+
+Generation: 29
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=195.75055 Adjusted=0.005082578 Hits=0
+ 323,425903 -407,358704
+
+Generation: 30
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=195.57587 Adjusted=0.0050870944 Hits=0
+ 323,301941 -407,224213
+
+Generation: 31
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=189.53326 Adjusted=0.0052484274 Hits=0
+ 322,512024 -407,869507
+
+Generation: 32
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=189.53326 Adjusted=0.0052484274 Hits=0
+ 322,512024 -407,869507
+
+Generation: 33
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=187.21979 Adjusted=0.005312938 Hits=0
+ 322,252319 -408,201385
+
+Generation: 34
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=186.01746 Adjusted=0.0053470945 Hits=0
+ 322,79483 -409,485809
+
+Generation: 35
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=181.44708 Adjusted=0.0054810415 Hits=0
+ 321,298126 -408,61618
+
+Generation: 36
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=179.36188 Adjusted=0.0055444087 Hits=0
+ 320,98761 -408,837494
+
+Generation: 37
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=173.7149 Adjusted=0.00572361 Hits=0
+ 320,98761 -410,891571
+
+Generation: 38
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=173.7149 Adjusted=0.00572361 Hits=0
+ 320,98761 -410,891571
+
+Generation: 39
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=171.05579 Adjusted=0.0058120685 Hits=0
+ 320,987213 -412,014618
+
+Generation: 40
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=170.78711 Adjusted=0.0058211586 Hits=0
+ 320,98761 -412,136719
+
+Generation: 41
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=169.55188 Adjusted=0.0058633187 Hits=0
+ 320,541199 -411,796265
+
+Generation: 42
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=166.67499 Adjusted=0.0059639188 Hits=0
+ 320,198303 -412,418152
+
+Generation: 43
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=164.22882 Adjusted=0.006052213 Hits=0
+ 320,081726 -413,382141
+
+Generation: 44
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=161.677 Adjusted=0.0061471504 Hits=0
+ 319,253601 -412,897156
+
+Generation: 45
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=159.5459 Adjusted=0.0062287482 Hits=0
+ 318,910522 -413,266663
+
+Generation: 46
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=158.95941 Adjusted=0.0062515857 Hits=0
+ 319,019501 -413,821533
+
+Generation: 47
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=158.95941 Adjusted=0.0062515857 Hits=0
+ 319,019501 -413,821533
+
+Generation: 48
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=157.56433 Adjusted=0.0063065886 Hits=0
+ 318,910522 -414,375549
+
+Generation: 49
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=156.6034 Adjusted=0.006345041 Hits=0
+ 318,84375 -414,808258
+
+Generation: 50
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=155.99054 Adjusted=0.0063698106 Hits=0
+ 318,315948 -413,910675
+
+Generation: 51
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=155.99054 Adjusted=0.0063698106 Hits=0
+ 318,315948 -413,910675
+
+Generation: 52
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=154.60217 Adjusted=0.0064266454 Hits=0
+ 318,559601 -415,395752
+
+Generation: 53
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=152.82355 Adjusted=0.006500955 Hits=0
+ 318,046051 -415,2341
+
+Generation: 54
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=148.94641 Adjusted=0.006669049 Hits=0
+ 317,323822 -416,105347
+
+Generation: 55
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=148.94641 Adjusted=0.006669049 Hits=0
+ 317,323822 -416,105347
+
+Generation: 56
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=148.31567 Adjusted=0.0066972207 Hits=0
+ 317,293335 -416,550385
+
+Generation: 57
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=147.59253 Adjusted=0.0067298133 Hits=0
+ 316,723602 -415,480316
+
+Generation: 58
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=145.31573 Adjusted=0.006834535 Hits=0
+ 316,506409 -416,719116
+
+Generation: 59
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=143.25922 Adjusted=0.006931966 Hits=0
+ 315,961639 -416,904205
+
+Generation: 60
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=143.25922 Adjusted=0.006931966 Hits=0
+ 315,961639 -416,904205
+
+Generation: 61
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=138.8216 Adjusted=0.007151971 Hits=0
+ 314,610809 -417,029144
+
+Generation: 62
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=138.8216 Adjusted=0.007151971 Hits=0
+ 314,610809 -417,029144
+
+Generation: 63
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=138.31445 Adjusted=0.007178006 Hits=0
+ 314,636993 -417,673798
+
+Generation: 64
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=137.76025 Adjusted=0.0072066747 Hits=0
+ 314,263092 -417,052307
+
+Generation: 65
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=135.59235 Adjusted=0.0073210546 Hits=0
+ 313,365265 -416,686462
+
+Generation: 66
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=134.48395 Adjusted=0.0073809484 Hits=0
+ 312,98056 -416,759949
+
+Generation: 67
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=133.83698 Adjusted=0.0074163633 Hits=0
+ 312,812286 -416,961273
+
+Generation: 68
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=132.4549 Adjusted=0.0074931686 Hits=0
+ 312,98056 -419,707703
+
+Generation: 69
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=132.39038 Adjusted=0.0074967924 Hits=0
+ 312,965698 -419,790527
+
+Generation: 70
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=130.88922 Adjusted=0.0075821206 Hits=0
+ 312,389954 -419,89566
+
+Generation: 71
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=130.41394 Adjusted=0.007609543 Hits=0
+ 312,085876 -419,156586
+
+Generation: 72
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=128.79889 Adjusted=0.0077042263 Hits=0
+ 311,490051 -419,739807
+
+Generation: 73
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=127.7547 Adjusted=0.007766707 Hits=0
+ 310,903381 -419,121399
+
+Generation: 74
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=127.522705 Adjusted=0.0077807265 Hits=0
+ 310,917053 -419,810211
+
+Generation: 75
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=126.38422 Adjusted=0.007850266 Hits=0
+ 310,168915 -418,887085
+
+Generation: 76
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=124.576965 Adjusted=0.007963244 Hits=0
+ 309,088257 -418,644989
+
+Generation: 77
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=124.576965 Adjusted=0.007963244 Hits=0
+ 309,088257 -418,644989
+
+Generation: 78
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=122.5791 Adjusted=0.008091983 Hits=0
+ 307,806061 -418,776794
+
+Generation: 79
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=122.14789 Adjusted=0.008120318 Hits=0
+ 307,590637 -419,065247
+
+Generation: 80
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=121.88275 Adjusted=0.008137839 Hits=0
+ 307,590637 -419,736115
+
+Generation: 81
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=121.34076 Adjusted=0.00817389 Hits=0
+ 307,255463 -420,247101
+
+Generation: 82
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=120.86035 Adjusted=0.008206114 Hits=0
+ 306,659668 -419,547485
+
+Generation: 83
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=120.46277 Adjusted=0.008232975 Hits=0
+ 306,403778 -420,005371
+
+Generation: 84
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=120.46277 Adjusted=0.008232975 Hits=0
+ 306,403778 -420,005371
+
+Generation: 85
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=120.286255 Adjusted=0.008244958 Hits=0
+ 306,330078 -420,65625
+
+Generation: 86
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=120.194336 Adjusted=0.008251211 Hits=0
+ 306,21701 -420,498322
+
+Generation: 87
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=119.96271 Adjusted=0.008267011 Hits=0
+ 305,671143 -419,506836
+
+Generation: 88
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=119.21057 Adjusted=0.008318736 Hits=0
+ 304,81955 -420,057312
+
+Generation: 89
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.93384 Adjusted=0.008337931 Hits=0
+ 304,358856 -420,228088
+
+Generation: 90
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.6889 Adjusted=0.008354994 Hits=0
+ 303,911804 -420,736511
+
+Generation: 91
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.6889 Adjusted=0.008354994 Hits=0
+ 303,911804 -420,736511
+
+Generation: 92
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.599365 Adjusted=0.008361248 Hits=0
+ 303,651337 -420,925018
+
+Generation: 93
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.47168 Adjusted=0.008370184 Hits=0
+ 303,037445 -420,950043
+
+Generation: 94
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.46387 Adjusted=0.008370732 Hits=0
+ 302,571136 -420,521729
+
+Generation: 95
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.44519 Adjusted=0.00837204 Hits=0
+ 302,571136 -420,741394
+
+Generation: 96
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.44379 Adjusted=0.008372139 Hits=0
+ 302,571136 -420,766968
+
+Generation: 97
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.43884 Adjusted=0.008372486 Hits=0
+ 302,571136 -421,007904
+
+Generation: 98
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.43884 Adjusted=0.008372486 Hits=0
+ 302,571136 -421,007904
+
+Generation: 99
+Best Individual:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.43884 Adjusted=0.008372486 Hits=0
+ 302,571136 -421,007904
+
+Best Individual of Run:
+Subpopulation 0:
+Evaluated: T
+Fitness: Standardized=118.43884 Adjusted=0.008372486 Hits=0
+ 302,571136 -421,007904
