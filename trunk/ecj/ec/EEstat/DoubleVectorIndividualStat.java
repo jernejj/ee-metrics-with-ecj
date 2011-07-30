@@ -2,6 +2,7 @@ package ec.EEstat;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.Vector;
 
 import ec.EvolutionState;
 import ec.util.Parameter;
@@ -13,6 +14,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 {
 	public int indTrace[][];
 	public int indStatistics[];
+	public Vector<Integer> mutatedGenoms;
 	private int fractNums;
 	
 	public static final String P_DOUBLEVECTORINDIVIDUALSTAT = "double-vect-ind-stat";
@@ -46,6 +48,8 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			myobj.indStatistics[i] = indStatistics[i];
 		}
 		
+		myobj.mutatedGenoms = (Vector<Integer>)mutatedGenoms.clone();
+		
 		return myobj;
 	}
 
@@ -60,6 +64,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
+		mutatedGenoms = new Vector<Integer>();
 
 
 	}
@@ -72,6 +77,22 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		{
 			if(this.genome[i] != ((DoubleVectorIndividualStat)ind).genome[i])
 				dimmChanged++;
+		}
+		
+		return dimmChanged;
+	}
+	
+	public int mutatedDimmensionChanged(VectorIndividual ind)
+	{
+		int dimmChanged = 0;
+		
+		for (int i = 0; i < this.genome.length; i++)
+		{
+			if(this.genome[i] != ((DoubleVectorIndividualStat)ind).genome[i])
+			{
+				dimmChanged++;
+				mutatedGenoms.add(i);
+			}
 		}
 		
 		return dimmChanged;
@@ -98,6 +119,28 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		else
 			return(2); //this individual is similar to second
 		
+	}
+	
+	public void repairMutations(DoubleVectorIndividualStat similarParent1, DoubleVectorIndividualStat parent2)
+	{
+		this.indStatistics[1] = 0;
+		
+		for (int i = 0; i < genome.length; i++) 
+		{
+			if(genome[i] == similarParent1.genome[i]  &&
+				similarParent1.mutatedGenoms.contains(i))
+			{
+				indStatistics[1]++;
+			}
+			
+			else if(genome[i] != similarParent1.genome[i]  &&
+				genome[i] == parent2.genome[i] &&
+				parent2.mutatedGenoms.contains(i))
+			{
+				indStatistics[1]++;
+			}
+			
+		}
 	}
 	
 	
@@ -127,6 +170,8 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			this.indStatistics[2] = ind1.indStatistics[2];
 			this.indStatistics[3] = ind1.indStatistics[3];
 			
+			this.repairMutations(ind1, ind2);
+			
 		}
 		else
 		{
@@ -140,6 +185,8 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			this.indStatistics[1] = ind2.indStatistics[1];
 			this.indStatistics[2] = ind2.indStatistics[2];
 			this.indStatistics[3] = ind2.indStatistics[3];
+			
+			this.repairMutations(ind2, ind1);
 		}
 		
 		
@@ -154,6 +201,8 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			((DoubleVectorIndividualStat)ind).indStatistics = ind1.indStatistics.clone();
 			((DoubleVectorIndividualStat)ind).indStatistics[0] = ((DoubleVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
+			((DoubleVectorIndividualStat)ind).repairMutations(ind1, ind2);
+			
 		}
 		else
 		{
@@ -163,6 +212,8 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			
 			((DoubleVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((DoubleVectorIndividualStat)ind).indStatistics[0] = ((DoubleVectorIndividualStat)ind).dimmensionChanged(ind2);
+			
+			((DoubleVectorIndividualStat)ind).repairMutations(ind2, ind1);
 		}
 
 	}
@@ -176,7 +227,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		
 		super.defaultMutate(state, thread);
 		
-		dimmChange = this.dimmensionChanged(tmpInd);
+		dimmChange = this.mutatedDimmensionChanged(tmpInd);
 		
 		/* store how may dimensions were changed by evolution */
 		if(dimmChange > 0)
@@ -195,6 +246,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	    Arrays.fill(indStatistics, 0);
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
+	    mutatedGenoms.clear();
 	    
     }
 
@@ -231,6 +283,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
+		mutatedGenoms.clear();
 		
 	}
 }
