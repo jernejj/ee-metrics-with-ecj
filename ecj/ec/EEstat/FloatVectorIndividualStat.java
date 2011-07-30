@@ -2,6 +2,7 @@ package ec.EEstat;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.Vector;
 
 import ec.EvolutionState;
 import ec.util.Parameter;
@@ -13,6 +14,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 {
 	public int indTrace[][];
 	public int indStatistics[];
+	public Vector<Integer> mutatedGenoms;
 	private int fractNums;
 	
 	public static final String P_FLOATVECTORINDIVIDUALSTAT = "float-vect-ind-stat";
@@ -46,6 +48,8 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			myobj.indStatistics[i] = indStatistics[i];
 		}
 		
+		myobj.mutatedGenoms = (Vector<Integer>)this.mutatedGenoms.clone();
+		
 		return myobj;
 	}
 
@@ -60,6 +64,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
+		mutatedGenoms = new Vector<Integer>();
 
 
 	}
@@ -72,6 +77,22 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		{
 			if(this.genome[i] != ((FloatVectorIndividualStat)ind).genome[i])
 				dimmChanged++;
+		}
+		
+		return dimmChanged;
+	}
+	
+	public int mutationDimmensionChanged(VectorIndividual ind)
+	{
+		int dimmChanged = 0;
+		
+		for (int i = 0; i < this.genome.length; i++)
+		{
+			if(this.genome[i] != ((FloatVectorIndividualStat)ind).genome[i])
+			{
+				dimmChanged++;
+				this.mutatedGenoms.add(i);
+			}
 		}
 		
 		return dimmChanged;
@@ -100,6 +121,27 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		
 	}
 	
+	public void repairMutations(FloatVectorIndividualStat similarParent1, FloatVectorIndividualStat parent2)
+	{
+		this.indStatistics[1] = 0;
+		
+		for (int i = 0; i < genome.length; i++) 
+		{
+			if(genome[i] == similarParent1.genome[i]  &&
+				similarParent1.mutatedGenoms.contains(i))
+			{
+				indStatistics[1]++;
+			}
+			
+			else if(genome[i] != similarParent1.genome[i]  &&
+				genome[i] == parent2.genome[i] &&
+				parent2.mutatedGenoms.contains(i))
+			{
+				indStatistics[1]++;
+			}
+			
+		}
+	}
 	
 	public void defaultCrossover(EvolutionState state, int thread, VectorIndividual ind)
 	{
@@ -127,6 +169,8 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			this.indStatistics[2] = ind1.indStatistics[2];
 			this.indStatistics[3] = ind1.indStatistics[3];
 			
+			this.repairMutations(ind1, ind2);
+			
 		}
 		else
 		{
@@ -140,6 +184,8 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			this.indStatistics[1] = ind2.indStatistics[1];
 			this.indStatistics[2] = ind2.indStatistics[2];
 			this.indStatistics[3] = ind2.indStatistics[3];
+			
+			this.repairMutations(ind2, ind1);
 		}
 		
 		
@@ -154,6 +200,9 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			((FloatVectorIndividualStat)ind).indStatistics = ind1.indStatistics.clone();
 			((FloatVectorIndividualStat)ind).indStatistics[0] = ((FloatVectorIndividualStat)ind).dimmensionChanged(ind1);
 			
+			((FloatVectorIndividualStat)ind).repairMutations(ind1, ind2);
+
+			
 		}
 		else
 		{
@@ -163,7 +212,12 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			
 			((FloatVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((FloatVectorIndividualStat)ind).indStatistics[0] = ((FloatVectorIndividualStat)ind).dimmensionChanged(ind2);
+			
+			((FloatVectorIndividualStat)ind).repairMutations(ind2, ind1);
+
 		}
+		
+		
 		
 	}
 	
@@ -176,7 +230,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		
 		super.defaultMutate(state, thread);
 		
-		dimmChange = this.dimmensionChanged(tmpInd);
+		dimmChange = this.mutationDimmensionChanged(tmpInd);
 		
 		/* store how may dimensions were changed by evolution */
 		if(dimmChange > 0)
@@ -195,6 +249,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	    Arrays.fill(indStatistics, 0);
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
+	    mutatedGenoms.clear();
 	    
     }
 	
@@ -230,6 +285,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
+		mutatedGenoms.clear();
 		
 	}
 }

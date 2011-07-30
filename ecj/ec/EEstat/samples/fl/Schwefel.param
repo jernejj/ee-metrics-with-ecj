@@ -18,7 +18,7 @@ select.tournament.size = 2
 
 pop.subpop.0.species =                  ec.vector.FloatVectorSpecies
 pop.subpop.0.species.ind =              ec.EEstat.FloatVectorIndividualStat
-pop.subpop.0.species.ind.fraction-digits = 6
+pop.subpop.0.species.ind.fraction-digits = 3
 pop.subpop.0.species.fitness = 		    ec.gp.koza.KozaFitness
 
 # Per-gene mutation probability of 1.0
