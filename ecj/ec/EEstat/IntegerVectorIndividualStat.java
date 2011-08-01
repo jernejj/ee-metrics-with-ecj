@@ -23,6 +23,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 {
 	public int indTrace[][];
 	public int indStatistics[];
+	private boolean created;
 	
 	public static final String P_INTEGERVECTORINDIVIDUAL = "int-vect-ind-stat";
     
@@ -54,6 +55,8 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			myobj.indStatistics[i] = indStatistics[i];
 		}
 		
+		myobj.created = false;
+		
 		return myobj;
 	}
 
@@ -63,6 +66,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
+		created = true;
 
 
 	}
@@ -166,6 +170,9 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 			((IntegerVectorIndividualStat)ind).indStatistics[0] = ((IntegerVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
 
+		created = true;
+		((IntegerVectorIndividualStat)ind).created = true;
+		
 	}
 	
 	public void defaultMutate(EvolutionState state, int thread)
@@ -184,6 +191,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		{
 			indStatistics[1] = dimmChange;
 		}
+		created = true;
 		
     }
     
@@ -196,6 +204,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	    Arrays.fill(indStatistics, 0);
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
+	    created = true;
 	    
     }
 
@@ -208,6 +217,11 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
 	    
+		if(!created)
+		{
+			return;
+		}
+		
 		/* set the proper ID for the indvidual */
 	    indTrace[2][0] = indSeq;
 	    indTrace[2][1] = state.generation;
@@ -222,6 +236,7 @@ public class IntegerVectorIndividualStat extends IntegerVectorIndividual impleme
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
+		created = false;
 		
 	}
 
