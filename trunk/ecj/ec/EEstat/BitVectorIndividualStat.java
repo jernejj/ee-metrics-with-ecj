@@ -14,6 +14,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 
 	public int indTrace[][];
 	public int indStatistics[];
+	public boolean created;
 	
 	public static final String P_BITVECTORINDIVIDUAL = "bit-vect-ind-stat";
     
@@ -44,6 +45,8 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 			myobj.indStatistics[i] = indStatistics[i];
 		}
 		
+		myobj.created = false;
+		
 		return myobj;
 	}
 
@@ -53,6 +56,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
+		created = true;
 
 
 	}
@@ -156,6 +160,9 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 			((BitVectorIndividualStat)ind).indStatistics = ind2.indStatistics.clone();
 			((BitVectorIndividualStat)ind).indStatistics[0] = ((BitVectorIndividualStat)ind).dimmensionChanged(ind2);
 		}
+		
+		created = true;
+		((BitVectorIndividualStat)ind).created = true;
 
 	}
 	
@@ -175,6 +182,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 		{
 			indStatistics[1] = dimmChange;
 		}
+		created = true;
 		
     }
     
@@ -187,7 +195,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 	    Arrays.fill(indStatistics, 0);
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
-	    
+	    created = true;
     }
 
 
@@ -198,6 +206,11 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 	 */
 	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
+		
+		if(!created)
+		{
+			return;
+		}
 	    
 		/* set the proper ID for the indvidual */
 	    indTrace[2][0] = indSeq;
@@ -213,6 +226,7 @@ public class BitVectorIndividualStat extends BitVectorIndividual implements EESt
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
+		created = false;
 		
 	}
 }

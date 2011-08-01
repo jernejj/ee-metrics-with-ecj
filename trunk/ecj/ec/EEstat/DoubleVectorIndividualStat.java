@@ -16,6 +16,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	public int indStatistics[];
 	public Vector<Integer> mutatedGenoms;
 	private int fractNums;
+	private boolean created;
 	
 	public static final String P_DOUBLEVECTORINDIVIDUALSTAT = "double-vect-ind-stat";
 	public static final String P_DOUBLEVECTORPRECISONOUTPUT = "fraction-digits";
@@ -49,6 +50,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		}
 		
 		myobj.mutatedGenoms = (Vector<Integer>)mutatedGenoms.clone();
+		myobj.created = false;
 		
 		return myobj;
 	}
@@ -65,6 +67,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
 		mutatedGenoms = new Vector<Integer>();
+		created = false;
 
 
 	}
@@ -215,6 +218,9 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 			
 			((DoubleVectorIndividualStat)ind).repairMutations(ind2, ind1);
 		}
+		
+		created = true;
+		((DoubleVectorIndividualStat)ind).created = true;
 
 	}
 	
@@ -234,6 +240,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		{
 			indStatistics[1] = dimmChange;
 		}
+		created = true;
 		
     }
     
@@ -247,6 +254,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
 	    mutatedGenoms.clear();
+	    created = true;
 	    
     }
 
@@ -268,7 +276,14 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	 */
 	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
-	    
+		DecimalFormat decForm = new DecimalFormat();
+		decForm.setMaximumFractionDigits(fractNums);
+		
+		if(!created)
+		{
+			return;
+		}
+		
 		/* set the proper ID for the indvidual */
 	    indTrace[2][0] = indSeq;
 	    indTrace[2][1] = state.generation;
@@ -279,11 +294,13 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		state.output.print("in(" + genotypeToStringForHumans() + ") ", log);
 		state.output.print("c" + indStatistics[0] + " ", log);
 		state.output.print("m" + indStatistics[1] + " ", log);
-		state.output.print("r" + indStatistics[2] + "\n", log);
+		state.output.print("r" + indStatistics[2] + " ", log);
+		state.output.print("fit(" + decForm.format(this.fitness) + ")\n", log);
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
 		mutatedGenoms.clear();
+		created = false;
 		
 	}
 }

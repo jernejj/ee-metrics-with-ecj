@@ -16,6 +16,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	public int indStatistics[];
 	public Vector<Integer> mutatedGenoms;
 	private int fractNums;
+	private boolean created;
 	
 	public static final String P_FLOATVECTORINDIVIDUALSTAT = "float-vect-ind-stat";
 	public static final String P_DOUBLEVECTORPRECISONOUTPUT = "fraction-digits";
@@ -49,6 +50,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		}
 		
 		myobj.mutatedGenoms = (Vector<Integer>)this.mutatedGenoms.clone();
+		myobj.created = false;
 		
 		return myobj;
 	}
@@ -65,6 +67,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		indTrace = new int[3][2];
 		indStatistics = new int[4];
 		mutatedGenoms = new Vector<Integer>();
+		created = true;
 
 
 	}
@@ -217,6 +220,9 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 
 		}
 		
+		this.created = true;
+		((FloatVectorIndividualStat)ind).created = true;
+		
 		
 		
 	}
@@ -238,6 +244,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 			indStatistics[1] = dimmChange;
 		}
 		
+		this.created = true;
     }
     
 
@@ -250,7 +257,7 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	    Arrays.fill(indTrace[0], -1);
 	    Arrays.fill(indTrace[1], -1);
 	    mutatedGenoms.clear();
-	    
+	    this.created = true;
     }
 	
 	public String genotypeToStringForHumans()
@@ -270,6 +277,13 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 	 */
 	public void printIndividualStats(EvolutionState state, int indSeq, int log)
 	{
+		DecimalFormat decForm = new DecimalFormat();
+		decForm.setMaximumFractionDigits(fractNums);
+		
+		if(!created)
+		{
+			return;
+		}
 	    
 		/* set the proper ID for the indvidual */
 	    indTrace[2][0] = indSeq;
@@ -281,11 +295,13 @@ public class FloatVectorIndividualStat extends FloatVectorIndividual implements 
 		state.output.print("in(" + genotypeToStringForHumans() + ") ", log);
 		state.output.print("c" + indStatistics[0] + " ", log);
 		state.output.print("m" + indStatistics[1] + " ", log);
-		state.output.print("r" + indStatistics[2] + "\n", log);
+		state.output.print("r" + indStatistics[2] + " ", log);
+		state.output.print("fit(" + decForm.format(this.fitness) + ")\n", log);
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);
 		mutatedGenoms.clear();
+		created = false;
 		
 	}
 }
