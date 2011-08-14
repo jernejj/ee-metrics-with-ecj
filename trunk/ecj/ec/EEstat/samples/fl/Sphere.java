@@ -3,9 +3,9 @@ package ec.EEstat.samples.fl;
 import ec.EvolutionState;
 import ec.Individual;
 import ec.Problem;
-import ec.EEstat.FloatVectorIndividualStat;
 import ec.gp.koza.KozaFitness;
 import ec.simple.SimpleProblemForm;
+import ec.vector.DoubleVectorIndividual;
 
 public class Sphere extends Problem implements SimpleProblemForm 
 {
@@ -15,10 +15,10 @@ public class Sphere extends Problem implements SimpleProblemForm
 			int subpopulation, int threadnum) 
 	{
         
-        if( !( ind instanceof FloatVectorIndividualStat ) )
+        if( !( ind instanceof DoubleVectorIndividual ) )
             state.output.fatal( "The individuals for this problem should be DoubleVectorIndividuals." );
 
-        float[] genome = ((FloatVectorIndividualStat)ind).genome;
+        double[] genome = ((DoubleVectorIndividual)ind).genome;
         int len = genome.length;
         float value = 0;
 
