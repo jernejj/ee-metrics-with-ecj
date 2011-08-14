@@ -15,8 +15,8 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	public int indTrace[][];
 	public int indStatistics[];
 	public Vector<Integer> mutatedGenoms;
+	public boolean created;
 	private int fractNums;
-	private boolean created;
 	
 	public static final String P_DOUBLEVECTORINDIVIDUALSTAT = "double-vect-ind-stat";
 	public static final String P_DOUBLEVECTORPRECISONOUTPUT = "fraction-digits";
@@ -295,7 +295,7 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 		state.output.print("c" + indStatistics[0] + " ", log);
 		state.output.print("m" + indStatistics[1] + " ", log);
 		state.output.print("r" + indStatistics[2] + " ", log);
-		state.output.print("fit(" + decForm.format(this.fitness) + ")\n", log);
+		state.output.print("fit(" + decForm.format(this.fitness.fitness()) + ")\n", log);
 		
 		/* erase previus statistics of individual */
 		Arrays.fill(indStatistics, 0);

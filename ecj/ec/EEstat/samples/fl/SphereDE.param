@@ -1,0 +1,38 @@
+
+parent.0 =	../../../de/de.params
+
+breed = ec.EEstat.Rand1EitherOrDEBreederStat
+pop.subpop.0.size =  100
+generations =        300
+
+stat.file		= SphereDEOut.stat
+
+pop.subpop.0.species.pipe			= ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.source.0		= ec.vector.breed.VectorCrossoverPipeline
+pop.subpop.0.species.pipe.source.0.source.0	= ec.select.TournamentSelection
+pop.subpop.0.species.pipe.source.0.source.1	= ec.select.TournamentSelection
+select.tournament.size		= 2
+
+pop.subpop.0.species =                  ec.vector.FloatVectorSpecies
+pop.subpop.0.species.ind =              ec.EEstat.DoubleVectorIndividualStat
+pop.subpop.0.species.ind.fraction-digits = 6
+pop.subpop.0.species.fitness = 		ec.gp.koza.KozaFitness
+
+# Per-gene mutation probability of 1.0
+pop.subpop.0.species.mutation-prob = 0.3
+
+
+pop.subpop.0.species.genome-size =      10
+pop.subpop.0.species.min-gene = -5.12
+pop.subpop.0.species.max-gene = 5.12
+
+# One-point crossover
+pop.subpop.0.species.crossover-type = one
+
+
+eval.problem = ec.EEstat.samples.fl.Sphere
+
+
+stat.num-children       = 1
+stat.child.0            = ec.EEstat.EEStatPrint
+stat.child.0.stat-file  = SphereEEstatDE.stat
