@@ -2,15 +2,36 @@
 parent.0 =	../../../de/de.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
-eval.problem.type = sphere
+eval.problem.type = rosenbrock
+eval.problem.numOfEval = 30000
 
 breed = ec.EEstat.Rand1EitherOrDEBreederStat
-pop.subpop.0.size =  100
-generations =        300
+pop.subpop.0.size =  300
+generations =        500
+
+breed = ec.de.DEBreeder
+# Other breed choices: ec.de.Best1BinDEBreeder, ec.de.Rand1EitherOrDEBreeder
+
+# DE has certain parameters you must set.  Note that these parameters
+# are fairly sensitive to the problem at hand.
+
+# Scaling factor for mutation, used by all breeders:
+breed.f = 0.3
+
+# Gene-independent probability of crossover, used only by
+# DEBreeder and Best1BinDEBreeder
+breed.cr = 0.5
+
+# Scaling factor for noise on F, used only by Best1BinDEBreeder
+breed.f-noise = 0.001
+
+# Probability of picking the "classic" algorithm versus the alternate, 
+# only ud by Rand1EitherOrDEBreeder
+breed.pf = 0.5
 
 quit-on-run-complete	= true
 
-stat.file		= SphereDEOut.stat
+stat.file		= RosenbrockDEOut.stat
 
 pop.subpop.0.species.pipe			= ec.vector.breed.VectorMutationPipeline
 pop.subpop.0.species.pipe.source.0		= ec.vector.breed.VectorCrossoverPipeline
@@ -27,9 +48,9 @@ pop.subpop.0.species.fitness = 		ec.simple.SimpleFitness
 pop.subpop.0.species.mutation-prob = 0.3
 
 
-pop.subpop.0.species.genome-size =      10
-pop.subpop.0.species.min-gene = -5.12
-pop.subpop.0.species.max-gene = 5.12
+pop.subpop.0.species.genome-size = 30
+pop.subpop.0.species.min-gene = -5.0
+pop.subpop.0.species.max-gene = 10.0
 
 # One-point crossover
 pop.subpop.0.species.crossover-type = one
@@ -37,4 +58,4 @@ pop.subpop.0.species.crossover-type = one
 
 stat.num-children       = 1
 stat.child.0            = ec.EEstat.EEStatPrint
-stat.child.0.stat-file  = SphereEEstatDE.stat
+stat.child.0.stat-file  = RosenbrockEEStatDE.stat
