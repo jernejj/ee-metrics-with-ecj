@@ -39,7 +39,7 @@ public void setup(final EvolutionState state, final Parameter base)
     }
 
 
-public void preEvaluationStatistics(final EvolutionState state)
+public void postEvaluationStatistics(final EvolutionState state)
     {
 	
 	    // be certain to call the hook on super!
