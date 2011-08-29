@@ -1,0 +1,61 @@
+# Copyright 2010 by Sean Luke and George Mason University
+# Licensed under the Academic Free License version 3.0
+# See the file "LICENSE" for more information
+
+parent.0 = spea2.params
+
+eval.problem.type = g01
+
+#
+pop.subpop.0.size = 150
+breed.elite.0 =		50
+generations =       1000
+
+pop.subpop.0.species.min-gene.0 = 0
+pop.subpop.0.species.max-gene.0 = 1
+pop.subpop.0.species.min-gene.1 = 0
+pop.subpop.0.species.max-gene.1 = 1
+pop.subpop.0.species.min-gene.2 = 0
+pop.subpop.0.species.max-gene.2 = 1
+pop.subpop.0.species.min-gene.3 = 0
+pop.subpop.0.species.max-gene.3 = 1
+pop.subpop.0.species.min-gene.4 = 0
+pop.subpop.0.species.max-gene.4 = 1
+pop.subpop.0.species.min-gene.5 = 0
+pop.subpop.0.species.max-gene.5 = 1
+pop.subpop.0.species.min-gene.6 = 0
+pop.subpop.0.species.max-gene.6 = 1
+pop.subpop.0.species.min-gene.7 = 0
+pop.subpop.0.species.max-gene.7 = 1
+pop.subpop.0.species.min-gene.8 = 0
+pop.subpop.0.species.max-gene.8 = 1
+
+pop.subpop.0.species.min-gene.9 = 0
+pop.subpop.0.species.max-gene.9 = 100
+pop.subpop.0.species.min-gene.10 = 0
+pop.subpop.0.species.max-gene.10 = 100
+pop.subpop.0.species.min-gene.11 = 0
+pop.subpop.0.species.max-gene.11 = 100
+
+pop.subpop.0.species.min-gene.12 = 0
+pop.subpop.0.species.max-gene.12 = 1
+
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1
+
+
+#for greater genome-size, 100 generations will not suffice.
+#e.g. for genome-size = 10, try generations >= 1000
+pop.subpop.0.species.genome-size = 13
+pop.subpop.0.species.mutation-prob = 0.3
+pop.supbop.0.species.bounded = true
+
+
+pop.subpop.0.species.fitness.num-objectives = 10
+
+
+stat.file		= G01Out.stat
+
+stat.num-children       = 1
+stat.child.0            = ec.EEstat.EEStatPrint
+stat.child.0.stat-file  = G01EEstat.stat
