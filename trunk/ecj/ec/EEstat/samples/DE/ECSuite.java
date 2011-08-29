@@ -141,7 +141,7 @@ public class ECSuite extends Problem implements SimpleProblemForm
 	        
 	        if (countEval == numOfEval)
 	        {
-	        	//state.finisher.finishPopulation(state, ec.EvolutionState.R_SUCCESS);
+	        	state.finisher.finishPopulation(state, ec.EvolutionState.R_SUCCESS);
 	        	isOptimal = true;
 	        }
 	                

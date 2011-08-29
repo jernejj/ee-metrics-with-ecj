@@ -3,28 +3,12 @@ parent.0 =	../../../de/de.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = schwefel
-eval.problem.numOfEval = 1000
+eval.problem.numOfEval = 30000
 
 breed = ec.EEstat.DEBreederStat
-pop.subpop.0.size =  100
+pop.subpop.0.size =  300
 generations =        300
 
-# DE has certain parameters you must set.  Note that these parameters
-# are fairly sensitive to the problem at hand.
-
-# Scaling factor for mutation, used by all breeders:
-breed.f = 0.05
-
-# Gene-independent probability of crossover, used only by
-# DEBreeder and Best1BinDEBreeder
-breed.cr = 0.7
-
-# Scaling factor for noise on F, used only by Best1BinDEBreeder
-breed.f-noise = 0.001
-
-# Probability of picking the "classic" algorithm versus the alternate, 
-# only ud by Rand1EitherOrDEBreeder
-breed.pf = 0.5
 
 quit-on-run-complete	= true
 
@@ -45,9 +29,9 @@ pop.subpop.0.species.fitness = 		ec.simple.SimpleFitness
 pop.subpop.0.species.mutation-prob = 0.3
 
 
-pop.subpop.0.species.genome-size =      30
-pop.subpop.0.species.min-gene = -500
-pop.subpop.0.species.max-gene = 500
+pop.subpop.0.species.genome-size =    30
+pop.subpop.0.species.min-gene = -500.0
+pop.subpop.0.species.max-gene = 500.0
 
 # One-point crossover
 pop.subpop.0.species.crossover-type = one

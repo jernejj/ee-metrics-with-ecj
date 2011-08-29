@@ -5,29 +5,9 @@ eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = rosenbrock
 eval.problem.numOfEval = 30000
 
-breed = ec.EEstat.Rand1EitherOrDEBreederStat
+breed = ec.EEstat.DEBreederStat
 pop.subpop.0.size =  300
 generations =        500
-
-breed = ec.de.DEBreeder
-# Other breed choices: ec.de.Best1BinDEBreeder, ec.de.Rand1EitherOrDEBreeder
-
-# DE has certain parameters you must set.  Note that these parameters
-# are fairly sensitive to the problem at hand.
-
-# Scaling factor for mutation, used by all breeders:
-breed.f = 0.3
-
-# Gene-independent probability of crossover, used only by
-# DEBreeder and Best1BinDEBreeder
-breed.cr = 0.5
-
-# Scaling factor for noise on F, used only by Best1BinDEBreeder
-breed.f-noise = 0.001
-
-# Probability of picking the "classic" algorithm versus the alternate, 
-# only ud by Rand1EitherOrDEBreeder
-breed.pf = 0.5
 
 quit-on-run-complete	= true
 
