@@ -1,5 +1,5 @@
 
-parent.0 =	../../../pso/pso.params
+parent.0 =	pso.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = sphere
@@ -11,7 +11,7 @@ eval.problem.numOfEval = 30000
 
 quit-on-run-complete	= true
 
-stat.file		= SphereDEOut.stat
+stat.file		= SpherePSOOut.stat
 
 pop.subpop.0.species.pipe			= ec.vector.breed.VectorMutationPipeline
 pop.subpop.0.species.pipe.source.0		= ec.vector.breed.VectorCrossoverPipeline
@@ -38,4 +38,4 @@ pop.subpop.0.species.crossover-type = one
 
 stat.num-children       = 1
 stat.child.0            = ec.EEstat.EEStatPrint
-stat.child.0.stat-file  = SphereEEstatDE.stat
+stat.child.0.stat-file  = SphereEEstatPSO.stat

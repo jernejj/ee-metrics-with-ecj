@@ -1,0 +1,35 @@
+# Copyright 2010 by Sean Luke and George Mason University
+# Licensed under the Academic Free License version 3.0
+# See the file "LICENSE" for more information
+
+parent.0 = spea2.params
+
+eval.problem.type = g03
+
+#
+pop.subpop.0.size = 200
+breed.elite.0 =		50
+generations =       600
+
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1
+
+pop.subpop.0.species.fitness.maximize = false
+
+#for greater genome-size, 100 generations will not suffice.
+#e.g. for genome-size = 10, try generations >= 1000
+pop.subpop.0.species.genome-size = 10
+pop.subpop.0.species.mutation-prob = 0.3
+pop.supbop.0.species.bounded = true
+
+
+pop.subpop.0.species.fitness.num-objectives = 2
+pop.subpop.0.species.fitness.min.1 = -0.1
+pop.subpop.0.species.fitness.max.1 = 0.0
+
+
+stat.file		= G03Out.stat
+
+stat.num-children       = 1
+stat.child.0            = ec.EEstat.EEStatPrint
+stat.child.0.stat-file  = G03EEstat.stat
