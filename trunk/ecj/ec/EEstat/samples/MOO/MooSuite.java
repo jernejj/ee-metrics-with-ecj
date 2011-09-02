@@ -73,7 +73,7 @@ public class MooSuite extends Problem implements SimpleProblemForm
 
         float[] objectives = ((MultiObjectiveFitness)ind.fitness).getObjectives();
 
-        double f, g, h, sum;
+        double sum;
                 
         switch(problemType)
             {
@@ -85,11 +85,14 @@ public class MooSuite extends Problem implements SimpleProblemForm
                 for(int i = 0; i< 4; ++i)
                     sum1 += genome[i];
                 sum1 *= 5;
+                
                 for(int i = 0; i< 4; ++i)
                     sum2 += Math.pow(genome[i], 2);
                 sum2 *= 5;
+                
                 for(int i = 4; i < 13; ++i)
                 	sum3 += genome[i]; 
+                
                 sum = sum1 - sum2 - sum3;
                 objectives[0] = (float)sum;
                 objectives[1] = (float)(2*genome[0] + 2*genome[1] + 2*genome[9] + genome[10] - 10);
@@ -104,15 +107,36 @@ public class MooSuite extends Problem implements SimpleProblemForm
                 break;
                 
             case PROB_G03:
-                f = genome[0];
-                objectives[0] = (float)f;
-                sum = 0;
-                for(int i = 1; i< numDecisionVars; i++)
-                    sum += genome[i];
-                g = 1.0+9.0*sum/(float)(numDecisionVars-1);
-                h = 1.0-(f/g)*(f/g);
-                objectives[1] = (float)(g*h);
+            	double prod = 1.0;
+            	sum = 0;
+                int length = genome.length;
+                for(int i = 0; i < length; ++i)
+                	prod *= genome[i];
+                
+                for(int i = 0; i < length; ++i)
+                	sum += Math.pow(genome[i], 2);
+                
+                objectives[0] = (float)(-Math.pow(Math.sqrt(length), length) * prod);
+                objectives[1] = (float)(sum - 1);
                 break;
+                
+            case PROB_G09:
+            	objectives[0] = (float)(Math.pow(genome[0] - 10, 2) + 5*Math.pow(genome[1] - 12, 2) + Math.pow(genome[2], 4) +
+            					        3*Math.pow(genome[3] - 11, 2) + 10*Math.pow(genome[4], 6) + 7*Math.pow(genome[5], 2) +
+            					        Math.pow(genome[6], 4) - 4*genome[5]*genome[6] - 10*genome[5] - 8*genome[6]);
+            	objectives[1] = (float)(-127 + 2*Math.pow(genome[0], 2) + 3*Math.pow(genome[1], 4) + genome[2] + 4*Math.pow(genome[3], 2) + 5*genome[5]);
+            	objectives[2] = (float)(-282 + 7*genome[0] + 3*genome[1] + 10*Math.pow(genome[2], 2) +genome[3] - genome[4] );
+            	objectives[3] = (float)(-196 + 23*genome[0] + Math.pow(genome[1], 2) + 6*Math.pow(genome[5], 2) - 8*genome[6]);
+            	objectives[4] = (float)(4*Math.pow(genome[0], 2) + Math.pow(genome[1], 2) - 3*genome[0]*genome[1] + 2*Math.pow(genome[2], 2) + 5*genome[5] - 11*genome[6]);
+            	
+            case PROB_G10:
+            	objectives[0] = (float)(genome[0] + genome[1] + genome[2]);
+            	objectives[1] = (float)(-1 + 0.0025*(genome[3] + genome[5]));
+            	objectives[2] = (float)(-1 + 0.0025*(genome[4] + genome[6] - genome[3]));
+            	objectives[3] = (float)(-1 + 0.01*(genome[7] - genome[4]));
+            	objectives[4] = (float)(-genome[0]*genome[5] + 833.33252*genome[3] + 100*genome[0] - 83333.333);
+            	objectives[5] = (float)(-genome[1]*genome[6] + 1250*genome[4] + genome[1]*genome[3] - 1250*genome[3]);
+            	objectives[6] = (float)(-genome[2]*genome[7] + 1250000 + genome[2]*genome[4] - 2500*genome[4]);
                 
             default:
                 state.output.fatal( "ec.app.ecsuite.ECSuite has an invalid problem -- how on earth did that happen?" );
