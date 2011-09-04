@@ -33,14 +33,14 @@ public class PSOBreederStat extends PSOBreeder
 		// update particles
 		for (int i = 0; i < subpop.individuals.length; i++) 
 		{
-			DoubleVectorIndividual ind = (DoubleVectorIndividual) subpop.individuals[i];
-			DoubleVectorIndividual prevInd = (DoubleVectorIndividual) subpop.previousIndividuals[i];
+			DoubleVectorIndividualStat ind = (DoubleVectorIndividualStat) subpop.individuals[i];
+			DoubleVectorIndividualStat prevInd = (DoubleVectorIndividualStat) subpop.previousIndividuals[i];
 			// the individual's personal best
-			DoubleVectorIndividual pBest = (DoubleVectorIndividual) subpop.personalBests[i];
+			DoubleVectorIndividualStat pBest = (DoubleVectorIndividualStat) subpop.personalBests[i];
 			// the individual's neighborhood best
-			DoubleVectorIndividual nBest = (DoubleVectorIndividual) subpop.neighborhoodBests[i];
+			DoubleVectorIndividualStat nBest = (DoubleVectorIndividualStat) subpop.neighborhoodBests[i];
 			// the individuals's global best
-			DoubleVectorIndividual gBest = (DoubleVectorIndividual) subpop.globalBest;
+			DoubleVectorIndividualStat gBest = (DoubleVectorIndividualStat) subpop.globalBest;
 
 			// calculate update for each dimension in the genome
 			for (int j = 0; j < ind.genomeLength(); j++) 
@@ -62,7 +62,95 @@ public class PSOBreederStat extends PSOBreeder
 
 			if (subpop.clampRange)
 				ind.clamp();
+			
+			ind.created = true;
+			ind.indStatistics[1] = 1;
+			
+			if (ind.similarTo(prevInd, pBest) == 1)
+			{
+				if (ind.similarTo(prevInd, nBest) == 1)
+				{
+					if (ind.similarTo(prevInd, gBest) == 1)
+					{
+						ind.indTrace[0][0] = prevInd.indTrace[2][0];
+						ind.indTrace[0][1] = prevInd.indTrace[2][1];
+						
+						ind.indTrace[1][0] = gBest.indTrace[2][0];
+						ind.indTrace[1][1] = gBest.indTrace[2][1];
+					}
+					else
+					{
+						ind.indTrace[0][0] = gBest.indTrace[2][0];
+						ind.indTrace[0][1] = gBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = prevInd.indTrace[2][0];
+						ind.indTrace[1][1] = prevInd.indTrace[2][1];
+					}
+				}
+				else
+				{
+					if (ind.similarTo(nBest, gBest) == 1)
+					{
+						ind.indTrace[0][0] = nBest.indTrace[2][0];
+						ind.indTrace[0][1] = nBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = gBest.indTrace[2][0];
+						ind.indTrace[1][1] = gBest.indTrace[2][1];
+					}
+					else
+					{
+						ind.indTrace[0][0] = gBest.indTrace[2][0];
+						ind.indTrace[0][1] = gBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = nBest.indTrace[2][0];
+						ind.indTrace[1][1] = nBest.indTrace[2][1];
+					}
+				}
+			}
+			else
+			{
+				if (ind.similarTo(pBest, nBest) == 1)
+				{
+					if (ind.similarTo(pBest, gBest) == 1)
+					{
+						ind.indTrace[0][0] = pBest.indTrace[2][0];
+						ind.indTrace[0][1] = pBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = gBest.indTrace[2][0];
+						ind.indTrace[1][1] = gBest.indTrace[2][1];
+					}
+					else
+					{
+						ind.indTrace[0][0] = gBest.indTrace[2][0];
+						ind.indTrace[0][1] = gBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = pBest.indTrace[2][0];
+						ind.indTrace[1][1] = pBest.indTrace[2][1];
+					}
+				}
+				else
+				{
+					if (ind.similarTo(nBest, gBest) == 1)
+					{
+						ind.indTrace[0][0] = nBest.indTrace[2][0];
+						ind.indTrace[0][1] = nBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = gBest.indTrace[2][0];
+						ind.indTrace[1][1] = gBest.indTrace[2][1];
+					}
+					else
+					{
+						ind.indTrace[0][0] = gBest.indTrace[2][0];
+						ind.indTrace[0][1] = gBest.indTrace[2][1];
+						
+						ind.indTrace[1][0] = nBest.indTrace[2][0];
+						ind.indTrace[1][1] = nBest.indTrace[2][1];
+					}
+				}
+			}
+			
 		}
+		
 
 		// update previous locations
 		subpop.previousIndividuals = tempClone;

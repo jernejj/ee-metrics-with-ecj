@@ -2,21 +2,21 @@
 parent.0 =	pso.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
-eval.problem.type = sphere
+eval.problem.type = schwefel
 
 #breed = ec.EEstat.DEBreederStat
 pop.subpop.0.size =  200
-generations =        300
+generations =        350
 eval.problem.numOfEval = 30000
 
-pop.subpop.0.neighborhood-size = 	    40
-pop.subpop.0.clamp = 					false
-pop.subpop.0.initial-velocity-scale = 	0.1
-pop.subpop.0.velocity-multiplier = 		0.1
+pop.subpop.0.neighborhood-size = 	    20
+pop.subpop.0.clamp = 					true
+pop.subpop.0.initial-velocity-scale = 	1.0
+pop.subpop.0.velocity-multiplier = 		1.5
 
 quit-on-run-complete	= true
 
-stat.file		= SpherePSOOut.stat
+stat.file		= SchwefelPSOOut.stat
 
 
 pop.subpop.0.species.ind.fraction-digits = 6
@@ -26,8 +26,8 @@ pop.subpop.0.species.mutation-prob = 0.3
 
 
 pop.subpop.0.species.genome-size =     30
-pop.subpop.0.species.min-gene = -5.12
-pop.subpop.0.species.max-gene = 5.12
+pop.subpop.0.species.min-gene = -500
+pop.subpop.0.species.max-gene = 500
 
 # One-point crossover
 pop.subpop.0.species.crossover-type = one
@@ -35,4 +35,4 @@ pop.subpop.0.species.crossover-type = one
 
 stat.num-children       = 1
 stat.child.0            = ec.EEstat.EEStatPrint
-stat.child.0.stat-file  = SphereEEstatPSO.stat
+stat.child.0.stat-file  = SchwefelEEstatPSO.stat

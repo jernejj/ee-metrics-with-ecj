@@ -45,9 +45,9 @@ select.tournament.size = 				2
 pop.subpop.0.species.mutation-prob = 			0.005
 pop.subpop.0.species.crossover-type = 			one
 
-pop.subpop.0.size =					50
-pop.subpop.0.neighborhood-size = 			20
+pop.subpop.0.size =					    50
+pop.subpop.0.neighborhood-size = 	    20
 pop.subpop.0.clamp = 					false
-pop.subpop.0.initial-velocity-scale = 			1.0
-pop.subpop.0.velocity-multiplier = 			1.5
+pop.subpop.0.initial-velocity-scale = 	1.1
+pop.subpop.0.velocity-multiplier = 		1.5
 
