@@ -2,7 +2,7 @@
 parent.0 =	pso.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
-eval.problem.type = sphere
+eval.problem.type = rastrigin
 
 #breed = ec.EEstat.DEBreederStat
 pop.subpop.0.size =  200
@@ -10,13 +10,13 @@ generations =        300
 eval.problem.numOfEval = 30000
 
 pop.subpop.0.neighborhood-size = 	    40
-pop.subpop.0.clamp = 					false
+pop.subpop.0.clamp = 					true
 pop.subpop.0.initial-velocity-scale = 	0.1
 pop.subpop.0.velocity-multiplier = 		0.1
 
 quit-on-run-complete	= true
 
-stat.file		= SpherePSOOut.stat
+stat.file		= RastriginPSOOut.stat
 
 
 pop.subpop.0.species.ind.fraction-digits = 6
@@ -35,4 +35,4 @@ pop.subpop.0.species.crossover-type = one
 
 stat.num-children       = 1
 stat.child.0            = ec.EEstat.EEStatPrint
-stat.child.0.stat-file  = SphereEEstatPSO.stat
+stat.child.0.stat-file  = RastriginEEstatPSO.stat

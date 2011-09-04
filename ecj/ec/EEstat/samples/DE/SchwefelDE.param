@@ -3,12 +3,12 @@ parent.0 =	../../../de/de.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = schwefel
-eval.problem.numOfEval = 30000
 
 breed = ec.EEstat.DEBreederStat
-pop.subpop.0.size =  300
+pop.subpop.0.size =  200
 generations =        300
 
+eval.problem.numOfEval = 30000
 
 quit-on-run-complete	= true
 
