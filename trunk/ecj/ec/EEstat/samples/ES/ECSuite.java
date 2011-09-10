@@ -5,7 +5,7 @@
 */
 
  
-package ec.EEstat.samples.DE;
+package ec.EEstat.samples.ES;
 
 import ec.util.*;
 import ec.*;

@@ -5,13 +5,13 @@ eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = rosenbrock
 
 #breed = ec.EEstat.DEBreederStat
-pop.subpop.0.size =  250
+pop.subpop.0.size =  300
 generations =        300
 eval.problem.numOfEval = 30000
 
 pop.subpop.0.neighborhood-size = 	    50
 pop.subpop.0.clamp = 					false
-pop.subpop.0.initial-velocity-scale = 	0.1
+pop.subpop.0.initial-velocity-scale = 	0
 pop.subpop.0.velocity-multiplier = 		0.1
 
 quit-on-run-complete	= true
@@ -30,7 +30,8 @@ pop.subpop.0.species.min-gene = -5.0
 pop.subpop.0.species.max-gene = 10.0
 
 # One-point crossover
-pop.subpop.0.species.crossover-type = one
+pop.subpop.0.species.crossover-type = any
+pop.subpop.0.species.crossover-prob = 0.4
 
 
 stat.num-children       = 1

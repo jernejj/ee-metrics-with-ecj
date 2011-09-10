@@ -5,14 +5,14 @@ eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = schwefel
 
 #breed = ec.EEstat.DEBreederStat
-pop.subpop.0.size =  200
-generations =        350
+pop.subpop.0.size =  300
+generations =        500
 eval.problem.numOfEval = 30000
 
-pop.subpop.0.neighborhood-size = 	    20
-pop.subpop.0.clamp = 					true
-pop.subpop.0.initial-velocity-scale = 	1.0
-pop.subpop.0.velocity-multiplier = 		1.5
+pop.subpop.0.neighborhood-size = 	    5
+pop.subpop.0.clamp = 					false
+pop.subpop.0.initial-velocity-scale = 	0.14
+pop.subpop.0.velocity-multiplier = 		3.51
 
 quit-on-run-complete	= true
 
@@ -29,8 +29,9 @@ pop.subpop.0.species.genome-size =     30
 pop.subpop.0.species.min-gene = -500
 pop.subpop.0.species.max-gene = 500
 
-# One-point crossover
-pop.subpop.0.species.crossover-type = one
+#crossover
+pop.subpop.0.species.crossover-type = any
+pop.subpop.0.species.crossover-prob = 0.4
 
 
 stat.num-children       = 1
