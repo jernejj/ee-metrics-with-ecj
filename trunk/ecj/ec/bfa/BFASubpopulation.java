@@ -4,14 +4,14 @@ import ec.*;
 import ec.util.*;
 import ec.vector.*;
 
-import java.io.*;
-
 public class BFASubpopulation extends Subpopulation
 {
 	
 	public int numOfBacteria;
 	
 	public int numOfChemoLoop;
+	
+	public int countChemoSteps;
 	
 	public int numOfReproduction;
 	
@@ -49,6 +49,8 @@ public class BFASubpopulation extends Subpopulation
         chemotacticStepSize = state.parameters.getDouble(base.push(P_CHEMOTACTICSTEPSIZE), null, 0);
         
         divisorStepsize = state.parameters.getDouble(base.push(P_DIVISORSTEPSIZE), null, 0.0);
+        
+        countChemoSteps = 0;
 		
 	}
 
@@ -58,6 +60,8 @@ public class BFASubpopulation extends Subpopulation
 		{ 
 			inds[x] = null; 
 		}
+		
+		countChemoSteps = 0;
     }
 	
 	public void populate(EvolutionState state, int thread)
