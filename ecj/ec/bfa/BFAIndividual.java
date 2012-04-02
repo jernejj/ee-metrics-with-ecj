@@ -1,7 +1,6 @@
 package ec.bfa;
 
 import java.util.Random;
-import java.util.Vector;
 
 import ec.EvolutionState;
 import ec.EEstat.DoubleVectorIndividualStat;
