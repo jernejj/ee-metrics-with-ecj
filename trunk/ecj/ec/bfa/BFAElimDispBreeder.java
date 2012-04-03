@@ -3,6 +3,8 @@ package ec.bfa;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import com.sun.corba.se.spi.orbutil.fsm.State;
+
 import ec.Breeder;
 import ec.EvolutionState;
 import ec.Fitness;
@@ -10,11 +12,12 @@ import ec.Individual;
 import ec.Population;
 import ec.Subpopulation;
 import ec.select.FirstSelection;
+import ec.util.MersenneTwisterFast;
 import ec.util.Parameter;
 import ec.vector.DoubleVectorIndividual;
 import ec.vector.FloatVectorSpecies;
 
-public class BFABreeder extends Breeder 
+public class BFAElimDispBreeder extends Breeder 
 {
 	public int numOfChemoLoop;
 	
@@ -22,9 +25,13 @@ public class BFABreeder extends Breeder
 	
 	public int numOfReproduction;
 	
+	private int countReproductionSteps;
+	
 	public double chemotacticStepSize;
 	
 	public double divisorStepsize;
+	
+	public double eliminationProbability;
 	
 	public static final String P_NUMBEROFCHEMOTACTICSTEPS = "num-of-chemosteps";
 	
@@ -33,6 +40,8 @@ public class BFABreeder extends Breeder
 	public static final String P_CHEMOTACTICSTEPSIZE = "chemo-step-size";
 	
 	public static final String P_DIVISORSTEPSIZE = "step-divisor";
+	
+	public static final String P_ELIMINATIONPROBABILITY = "elim-prob";
 	
 	private boolean firstRun = true;
 
@@ -48,7 +57,11 @@ public class BFABreeder extends Breeder
         
         divisorStepsize = state.parameters.getDouble(base.push(P_DIVISORSTEPSIZE), null, 0.0);
         
+        eliminationProbability = state.parameters.getDouble(base.push(P_ELIMINATIONPROBABILITY), null, 0.0);
+        
         countChemoSteps = 0;
+        
+        countReproductionSteps = 0;
 	}
 	
 	public Population breedPopulation(EvolutionState state)
@@ -62,7 +75,7 @@ public class BFABreeder extends Breeder
 		{
 			tempClone[i] = (BFAIndividual)subPop.individuals[i].clone();
 		}
-        //System.arraycopy(subPop.individuals, 0, tempClone, 0, subPop.individuals.length);
+        
         
 		/*chemotactic step for each bacteria*/
 		for(int i = 0; i < subPop.individuals.length; i++)
@@ -116,6 +129,7 @@ public class BFABreeder extends Breeder
 			this.countChemoSteps /= this.divisorStepsize;
 			
 			ReproductBateries(subPop);
+			this.countReproductionSteps++;
 
 		}
 		else
@@ -123,9 +137,29 @@ public class BFABreeder extends Breeder
 			this.countChemoSteps++;
 		}
 		
+		if(this.countReproductionSteps == this.numOfReproduction)
+		{
+			EliminateAndDispers(subPop, state);
+			this.countReproductionSteps = 0;
+		}
+		
 		return state.population;
 	}
 	
+	private void EliminateAndDispers(BFASubpopulation subPop, EvolutionState state) 
+	{
+		MersenneTwisterFast rng = state.random[0];
+		for(int i = 0; i < subPop.individuals.length; i++)
+		{
+			BFAIndividual ind = (BFAIndividual)subPop.individuals[i];
+			if(rng.nextBoolean(this.eliminationProbability))
+			{
+				ind.reset(state, 0);
+			}
+		}
+ 
+	}
+
 	private void ReproductBateries(BFASubpopulation newSubPop)
 	{
 		Individual ind[] = (Individual[])newSubPop.individuals;
@@ -153,11 +187,10 @@ public class BFABreeder extends Breeder
 			Double healtInd1 = ((BFAIndividual)ind1).healt;
 			Double healtInd2 = ((BFAIndividual)ind2).healt;
 			
-		
-
 			return healtInd1.compareTo(healtInd2);
 		}
 	}
 
 }
+
 

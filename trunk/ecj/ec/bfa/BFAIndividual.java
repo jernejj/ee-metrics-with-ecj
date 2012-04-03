@@ -14,6 +14,10 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 	
 	public int direction[];
 	
+	public double healt;
+	
+	private int initialSwimLength;
+	
 	public static final String P_BACTERIASWIMLENGTH = "swim-length";
 	
 	public Object clone()
@@ -22,6 +26,8 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 		
 		clonedInd.swimLength = this.swimLength;
 		clonedInd.countSwimLength = this.countSwimLength;
+		clonedInd.healt = this.healt;
+		clonedInd.initialSwimLength = this.initialSwimLength;
 		
 		System.arraycopy(this.direction, 0, clonedInd.direction, 0, this.direction.length);
 		
@@ -40,10 +46,23 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 													   def.push(P_BACTERIASWIMLENGTH), 2);
 		
 		countSwimLength = 0;
+		healt = 0;
 		direction = new int[genLength];
+		
+		initialSwimLength = swimLength;
 		
 		this.thumble();
 		
+	}
+	
+	public void reset(EvolutionState state, int thread)
+	{
+		super.reset(state, thread);
+		
+		this.swimLength = this.initialSwimLength;
+		this.countSwimLength = 0;
+		this.healt = 0;
+		thumble();
 	}
 	
 	public void thumble()

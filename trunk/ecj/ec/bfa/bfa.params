@@ -29,7 +29,7 @@ pop.subpop.0.species.pipe.source.0.source.0 = 		ec.select.TournamentSelection
 pop.subpop.0.species.pipe.source.0.source.1 = 		same
 
 pop.subpop.0.species.ind =				ec.bfa.BFAIndividual
-pop.subpop.0.species.ind.swim-length = 3
+pop.subpop.0.species.ind.swim-length = 4
 
 
 # you can change these to whatever tickles your fancy
@@ -38,7 +38,7 @@ pop.subpop.0.species.max-gene =				5.12
 pop.subpop.0.species.genome-size = 			2
 
 select.tournament.size = 				2
-pop.subpop.0.species.mutation-prob = 			0.005
+pop.subpop.0.species.mutation-prob = 			1
 pop.subpop.0.species.crossover-type = 			one
 
 pop.subpop.0.size =					    50
