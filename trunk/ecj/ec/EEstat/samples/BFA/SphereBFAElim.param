@@ -9,15 +9,15 @@ pop.subpop.0.size =  150
 generations =        700
 
 
-breed.num-of-chemosteps = 10
-breed.chemo-step-size = 0.01
-breed.step-divisor = 1.01
-breed.elim-prob = 0.4
-breed.number-of-reproducation = 3
+breed.num-of-chemosteps = 5
+breed.chemo-step-size = 3.7
+breed.step-divisor = 1.3
+breed.elim-prob = 0.05
+breed.number-of-reproducation = 5
 
 pop.subpop.0.species.ind.swim-length = 3
-
 pop.subpop.0.species.genome-size = 	2
+pop.subpop.0.species.ind.fraction-digits = 10
 
 quit-on-run-complete	= false
 
