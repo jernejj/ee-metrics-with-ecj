@@ -93,7 +93,7 @@ public class BFABreeder extends Breeder
 			else
 			{
 				ind.countSwimLength = 0;
-				ind.thumble();
+				ind.thumble(state);
 			}
 			
 			ind.created = true;
@@ -113,7 +113,7 @@ public class BFABreeder extends Breeder
 		if(this.countChemoSteps == this.numOfChemoLoop)
 		{
 			this.countChemoSteps = 0;
-			this.countChemoSteps /= this.divisorStepsize;
+			this.chemotacticStepSize /= this.divisorStepsize;
 			
 			ReproductBateries(subPop);
 
@@ -153,8 +153,6 @@ public class BFABreeder extends Breeder
 			Double healtInd1 = ((BFAIndividual)ind1).healt;
 			Double healtInd2 = ((BFAIndividual)ind2).healt;
 			
-		
-
 			return healtInd1.compareTo(healtInd2);
 		}
 	}

@@ -37,7 +37,7 @@ pop.subpop.0.species.min-gene =				-5.12
 pop.subpop.0.species.max-gene =				5.12
 pop.subpop.0.species.genome-size = 			2
 
-select.tournament.size = 				2
+select.tournament.size = 				50
 pop.subpop.0.species.mutation-prob = 			1
 pop.subpop.0.species.crossover-type = 			one
 

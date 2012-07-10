@@ -51,7 +51,7 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 		
 		initialSwimLength = swimLength;
 		
-		this.thumble();
+		this.thumble(state);
 		
 	}
 	
@@ -62,17 +62,16 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 		this.swimLength = this.initialSwimLength;
 		this.countSwimLength = 0;
 		this.healt = 0;
-		thumble();
+		thumble(state);
 	}
 	
-	public void thumble()
+	public void thumble(EvolutionState state)
 	{
 		int genLength = this.genome.length;
-		Random rand = new Random();
 		
 		for(int i = 0; i < genLength; i++)
 		{
-			direction[i] = rand.nextInt(2) == 0 ? -1 : 1;
+			direction[i] = state.random[0].nextBoolean() ? -1 : 1;
 		}
 	}
 
