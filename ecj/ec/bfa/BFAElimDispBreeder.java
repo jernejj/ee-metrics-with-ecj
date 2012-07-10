@@ -85,8 +85,8 @@ public class BFAElimDispBreeder extends Breeder
 			FloatVectorSpecies species = (FloatVectorSpecies)ind.species;
 						
 			/* check if bacteria will swim or tumble */
-			if(ind.countSwimLength < ind.swimLength &&
-			   ind.fitness.betterThan(prevInd.fitness) ||
+			if( (ind.countSwimLength < ind.swimLength &&
+			     Math.abs(ind.fitness.fitness()) <= Math.abs(prevInd.fitness.fitness()) )||
 			   firstRun)
 			{
 				for(int gidx = 0; gidx < ind.genome.length; gidx++)
@@ -106,7 +106,7 @@ public class BFAElimDispBreeder extends Breeder
 			else
 			{
 				ind.countSwimLength = 0;
-				ind.thumble();
+				ind.thumble(state);
 			}
 			
 			ind.created = true;
@@ -126,7 +126,7 @@ public class BFAElimDispBreeder extends Breeder
 		if(this.countChemoSteps == this.numOfChemoLoop)
 		{
 			this.countChemoSteps = 0;
-			this.countChemoSteps /= this.divisorStepsize;
+			this.chemotacticStepSize /= this.divisorStepsize;
 			
 			ReproductBateries(subPop);
 			this.countReproductionSteps++;
@@ -152,6 +152,7 @@ public class BFAElimDispBreeder extends Breeder
 		for(int i = 0; i < subPop.individuals.length; i++)
 		{
 			BFAIndividual ind = (BFAIndividual)subPop.individuals[i];
+			ind.healt = 0;
 			if(rng.nextBoolean(this.eliminationProbability))
 			{
 				ind.reset(state, 0);
