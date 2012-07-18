@@ -1,6 +1,7 @@
 package ec.EEstat;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
 import java.util.Vector;
 
@@ -261,6 +262,11 @@ public class DoubleVectorIndividualStat extends DoubleVectorIndividual implement
 	public String genotypeToStringForHumans()
     {
 		DecimalFormat decForm = new DecimalFormat();
+		DecimalFormatSymbols decSymbol = new DecimalFormatSymbols();
+		decSymbol.setDecimalSeparator('.');
+		decForm.setDecimalSeparatorAlwaysShown(false);
+		decForm.setGroupingUsed(false);
+		decForm.setDecimalFormatSymbols(decSymbol);
 		decForm.setMaximumFractionDigits(fractNums);
 		
 	    String s = "";

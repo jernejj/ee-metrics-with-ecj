@@ -1,13 +1,13 @@
 
 parent.0 =	pso.params
 
-eval.problem = ec.EEstat.samples.DE.ECSuite
+eval.problem = ec.EEstat.samples.PSO.ECSuite
 eval.problem.type = schwefel
 
 #breed = ec.EEstat.DEBreederStat
 pop.subpop.0.size =  300
 generations =        500
-eval.problem.numOfEval = 30000
+eval.problem.numOfEval = 90000
 
 pop.subpop.0.neighborhood-size = 	    5
 pop.subpop.0.clamp = 					false
@@ -25,9 +25,9 @@ pop.subpop.0.species.ind.fraction-digits = 6
 pop.subpop.0.species.mutation-prob = 0.3
 
 
-pop.subpop.0.species.genome-size =     30
-pop.subpop.0.species.min-gene = -500
-pop.subpop.0.species.max-gene = 500
+pop.subpop.0.species.genome-size =     20
+pop.subpop.0.species.min-gene = -500.0
+pop.subpop.0.species.max-gene = 500.0
 
 #crossover
 pop.subpop.0.species.crossover-type = any

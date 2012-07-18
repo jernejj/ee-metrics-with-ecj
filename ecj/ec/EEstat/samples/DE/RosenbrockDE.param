@@ -3,11 +3,25 @@ parent.0 =	../../../de/de.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = rosenbrock
-eval.problem.numOfEval = 30000
+eval.problem.numOfEval = 90000
 
 breed = ec.EEstat.DEBreederStat
 pop.subpop.0.size =  300
-generations =        500
+generations =        300
+
+# Scaling factor for mutation, used by all breeders:
+breed.f = 0.1
+
+# Gene-independent probability of crossover, used only by
+# DEBreeder and Best1BinDEBreeder
+breed.cr = 0.35
+
+# Scaling factor for noise on F, used only by Best1BinDEBreeder
+breed.f-noise = 0.001
+
+# Probability of picking the "classic" algorithm versus the alternate, 
+# only ud by Rand1EitherOrDEBreeder
+breed.pf = 0.5
 
 quit-on-run-complete	= true
 
@@ -28,13 +42,12 @@ pop.subpop.0.species.fitness = 		ec.simple.SimpleFitness
 pop.subpop.0.species.mutation-prob = 0.3
 
 
-pop.subpop.0.species.genome-size = 30
+pop.subpop.0.species.genome-size = 20
 pop.subpop.0.species.min-gene = -5.0
 pop.subpop.0.species.max-gene = 10.0
 
 # One-point crossover
-pop.subpop.0.species.crossover-type = one
-
+pop.subpop.0.species.crossover-type = two
 
 stat.num-children       = 1
 stat.child.0            = ec.EEstat.EEStatPrint
