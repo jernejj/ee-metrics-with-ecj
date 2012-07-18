@@ -7,12 +7,12 @@ eval.problem.type = sphere
 #breed = ec.EEstat.DEBreederStat
 pop.subpop.0.size =  300
 generations =        300
-eval.problem.numOfEval = 30000
+eval.problem.numOfEval = 90000
 
 pop.subpop.0.neighborhood-size = 	    5
 pop.subpop.0.clamp = 					false
-pop.subpop.0.initial-velocity-scale = 	0
-pop.subpop.0.velocity-multiplier = 		0.27
+pop.subpop.0.initial-velocity-scale = 	0.1
+pop.subpop.0.velocity-multiplier = 		0.21
 
 quit-on-run-complete	= true
 
@@ -25,7 +25,7 @@ pop.subpop.0.species.ind.fraction-digits = 6
 pop.subpop.0.species.mutation-prob = 0.3
 
 
-pop.subpop.0.species.genome-size =     30
+pop.subpop.0.species.genome-size =     20
 pop.subpop.0.species.min-gene = -5.12
 pop.subpop.0.species.max-gene = 5.12
 

@@ -121,8 +121,8 @@ public class ECSuite extends Problem implements SimpleProblemForm
         final int subpopulation,
         final int threadnum)
         {
-	        if( !( ind instanceof DoubleVectorIndividual ) )
-	            state.output.fatal( "The individuals for this problem should be DoubleVectorIndividuals." );
+	       /* if( !( ind instanceof DoubleVectorIndividual ) )
+	            state.output.fatal( "The individuals for this problem should be DoubleVectorIndividuals." );*/
 	
 	        DoubleVectorIndividual temp = (DoubleVectorIndividual)ind;
 	        double[] genome = temp.genome;
@@ -242,10 +242,10 @@ public class ECSuite extends Problem implements SimpleProblemForm
             case PROB_SCHWEFEL:
             	for(int i = 0; i < len; i++)
                 {
-         	        value += genome[i] * Math.sin( Math.sqrt(Math.abs(genome[i])) );
+         	        value -= genome[i] * Math.sin( Math.sqrt(Math.abs(genome[i])) );
                 }
                 value = (float)418.9829 * len + value;
-                return (value < 0 ? value : -value);
+                return -value;
             	
 
             default:

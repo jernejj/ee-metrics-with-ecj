@@ -2,7 +2,7 @@ parent.0 =	../../../es/es.params
 
 eval.problem = ec.EEstat.samples.ES.ECSuite
 eval.problem.type = schwefel
-eval.problem.numOfEval = 30000
+eval.problem.numOfEval = 90000
 
 breed =              ec.es.MuPlusLambdaBreeder
 es.mu.0 =            50
@@ -12,13 +12,12 @@ generations =        1000
 
 quit-on-run-complete	= true
 
-pop.subpop.0.duplicate-retries =	2
-
-pop.subpop.0.species.pipe = ec.vector.breed.VectorCrossoverPipeline
-pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe = ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorCrossoverPipeline
 pop.subpop.0.species.pipe.source.0.source.0 = ec.es.ESSelection
-pop.subpop.0.species.pipe.source.1	= ec.select.TournamentSelection
-select.tournament.size		= 2
+pop.subpop.0.species.pipe.source.0.source.1	= ec.select.TournamentSelection
+select.tournament.size	= 2
+
 
 pop.subpop.0.species =                  ec.vector.FloatVectorSpecies
 pop.subpop.0.species.ind =              ec.EEstat.DoubleVectorIndividualStat
@@ -30,15 +29,15 @@ pop.subpop.0.species.mutation-prob = 1.0
 
 # Use Gaussian Convolution with a standard deviation of 0.5
 pop.subpop.0.species.mutation-type = gauss
-pop.subpop.0.species.mutation-stdev = 3.8
+pop.subpop.0.species.mutation-stdev = 6.7
 
-pop.subpop.0.species.genome-size =    30
+pop.subpop.0.species.genome-size =    20
 pop.subpop.0.species.min-gene = -500
 pop.subpop.0.species.max-gene = 500
 
 # One-point crossover
 pop.subpop.0.species.crossover-type = any
-pop.subpop.0.species.crossover-prob = 0.5
+pop.subpop.0.species.crossover-prob = 0
 
 stat.file		= SchwefelOut.stat
 

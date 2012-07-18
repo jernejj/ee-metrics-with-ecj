@@ -14,14 +14,15 @@ generations =        700
 #breed.step-divisor = 1.3
 
 breed.num-of-chemosteps = 3
-breed.chemo-step-size = 0.6
-breed.step-divisor = 1.1
-breed.elim-prob = 0.05
-breed.number-of-reproducation = 30
+#breed.chemo-step-size = 0.25
+breed.step-divisor = 1.03
+breed.elim-prob = 0.01
+breed.number-of-reproducation = 10
 
 pop.subpop.0.species.ind.swim-length = 3
+pop.subpop.0.species.chemo-step-size = 0.25
 #pop.subpop.0.species.genome-size = 	2
-pop.subpop.0.species.genome-size = 	6
+pop.subpop.0.species.genome-size = 	20
 pop.subpop.0.species.ind.fraction-digits = 10
 
 quit-on-run-complete	= false
