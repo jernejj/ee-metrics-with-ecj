@@ -12,6 +12,7 @@ import ec.Individual;
 import ec.Population;
 import ec.Subpopulation;
 import ec.select.FirstSelection;
+import ec.simple.SimpleStatistics;
 import ec.util.MersenneTwisterFast;
 import ec.util.Parameter;
 import ec.vector.DoubleVectorIndividual;
@@ -27,7 +28,7 @@ public class BFAElimDispBreeder extends Breeder
 	
 	private int countReproductionSteps;
 	
-	public double chemotacticStepSize;
+//	public double chemotacticStepSize;
 	
 	public double divisorStepsize;
 	
@@ -53,7 +54,7 @@ public class BFAElimDispBreeder extends Breeder
         
         numOfReproduction = state.parameters.getInt(base.push(P_NUMBEROFREPRODUCATIONS), null, 0);
         
-        chemotacticStepSize = state.parameters.getDouble(base.push(P_CHEMOTACTICSTEPSIZE), null, 0);
+ //       chemotacticStepSize = state.parameters.getDouble(base.push(P_CHEMOTACTICSTEPSIZE), null, 0);
         
         divisorStepsize = state.parameters.getDouble(base.push(P_DIVISORSTEPSIZE), null, 0.0);
         
@@ -91,7 +92,7 @@ public class BFAElimDispBreeder extends Breeder
 			{
 				for(int gidx = 0; gidx < ind.genome.length; gidx++)
 				{
-					ind.genome[gidx] += (this.chemotacticStepSize * ind.direction[gidx]);
+					ind.genome[gidx] += (ind.chemotacticStepSize * ind.direction[gidx]);
 					
 					/*if bacteria swims out of defined area, put the bacteria to some random place */
 					if(ind.genome[gidx] < species.minGene(gidx) ||
@@ -117,6 +118,13 @@ public class BFAElimDispBreeder extends Breeder
 			
 			ind.healt += Math.abs(ind.fitness.fitness());
 			
+			if(this.countChemoSteps == this.numOfChemoLoop)
+			{
+
+				ind.chemotacticStepSize /= this.divisorStepsize;
+
+			}
+			
 		}
 		
 		firstRun = false;
@@ -126,7 +134,7 @@ public class BFAElimDispBreeder extends Breeder
 		if(this.countChemoSteps == this.numOfChemoLoop)
 		{
 			this.countChemoSteps = 0;
-			this.chemotacticStepSize /= this.divisorStepsize;
+	//		this.chemotacticStepSize /= this.divisorStepsize;
 			
 			ReproductBateries(subPop);
 			this.countReproductionSteps++;
@@ -153,9 +161,11 @@ public class BFAElimDispBreeder extends Breeder
 		{
 			BFAIndividual ind = (BFAIndividual)subPop.individuals[i];
 			ind.healt = 0;
+
 			if(rng.nextBoolean(this.eliminationProbability))
 			{
 				ind.reset(state, 0);
+				ind.chemotacticStepSize = ind.initialChemoStepSize;
 			}
 		}
  

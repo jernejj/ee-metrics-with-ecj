@@ -3,7 +3,7 @@ parent.0 = ../../../bfa/bfaelim.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = sphere
-#eval.problem.numOfEval = 90000
+eval.problem.numOfEval = 90000
 
 pop.subpop.0.size =  150
 generations =        700
@@ -25,7 +25,7 @@ pop.subpop.0.species.chemo-step-size = 0.25
 pop.subpop.0.species.genome-size = 	20
 pop.subpop.0.species.ind.fraction-digits = 10
 
-quit-on-run-complete	= false
+quit-on-run-complete	= true
 
 stat.file		= SphereBFAElimOut.stat
 

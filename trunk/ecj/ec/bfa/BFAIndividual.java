@@ -10,6 +10,8 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 {
 	public int swimLength;
 	
+	public double chemotacticStepSize;
+	
 	public int countSwimLength;
 	
 	public int direction[];
@@ -18,7 +20,11 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 	
 	private int initialSwimLength;
 	
+	public double initialChemoStepSize;
+	
 	public static final String P_BACTERIASWIMLENGTH = "swim-length";
+	
+	public static final String P_CHEMOTACTICSTEPSIZE = "chemo-step-size";
 	
 	public Object clone()
 	{
@@ -28,6 +34,8 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 		clonedInd.countSwimLength = this.countSwimLength;
 		clonedInd.healt = this.healt;
 		clonedInd.initialSwimLength = this.initialSwimLength;
+		clonedInd.initialChemoStepSize = this.initialChemoStepSize;
+		clonedInd.chemotacticStepSize = this.chemotacticStepSize;
 		
 		System.arraycopy(this.direction, 0, clonedInd.direction, 0, this.direction.length);
 		
@@ -45,11 +53,15 @@ public class BFAIndividual extends DoubleVectorIndividualStat
 		swimLength = state.parameters.getIntWithDefault(base.push(P_BACTERIASWIMLENGTH),
 													   def.push(P_BACTERIASWIMLENGTH), 2);
 		
+		chemotacticStepSize = state.parameters.getDouble(base.push(P_CHEMOTACTICSTEPSIZE), null, 0);
+		
 		countSwimLength = 0;
 		healt = 0;
 		direction = new int[genLength];
 		
 		initialSwimLength = swimLength;
+		
+		initialChemoStepSize = chemotacticStepSize;
 		
 		this.thumble(state);
 		
