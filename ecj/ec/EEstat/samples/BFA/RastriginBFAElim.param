@@ -3,25 +3,25 @@ parent.0 = ../../../bfa/bfaelim.params
 
 eval.problem = ec.EEstat.samples.DE.ECSuite
 eval.problem.type = rastrigin
-#eval.problem.numOfEval = 90000
+eval.problem.numOfEval = 90000
 
 pop.subpop.0.size = 150
 generations =   700
 
 
-breed.num-of-chemosteps = 3
-breed.chemo-step-size = 1.1
-breed.step-divisor = 1.04
-breed.elim-prob = 0.01
-breed.number-of-reproducation = 10
+breed.num-of-chemosteps = 5
+breed.step-divisor = 1.08
+breed.elim-prob = 0.05
+breed.number-of-reproducation = 5
 
-pop.subpop.0.species.ind.swim-length = 3
-pop.subpop.0.species.genome-size = 	6
+pop.subpop.0.species.ind.swim-length = 5
+pop.subpop.0.species.chemo-step-size = 0.75
+pop.subpop.0.species.genome-size = 	20
 pop.subpop.0.species.min-gene = -5.12
 pop.subpop.0.species.max-gene = 5.12
 pop.subpop.0.species.ind.fraction-digits = 10
 
-quit-on-run-complete	= false
+quit-on-run-complete	= true
 
 stat.file		= RastriginBFAElimOut.stat
 
