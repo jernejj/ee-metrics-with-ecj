@@ -133,8 +133,8 @@ public class DEBreederStat extends DEBreeder
 		}
 		else
 		{
-			v.indStatistics[0] = 0;
-			v.indStatistics[1] = v.dimmensionChanged(parent);
+			v.indStatistics[0] = v.dimmensionChanged(parent);
+			v.indStatistics[1] = 0;
 		}
 		
 		return newInd;
